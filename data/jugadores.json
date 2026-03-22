@@ -1,146 +1,11 @@
 [
   {
-    "id": 1,
-    "nombre": "Martín Gonzalo",
-    "apellido": "Barrios Morán",
-    "apodo": "Martin",
-    "posicion": "Arquero",
-    "numero": 1,
-    "foto": null
-  },
-  {
-    "id": 2,
-    "nombre": "Gustavo Ezequiel",
-    "apellido": "Castillo",
-    "apodo": "Guti",
-    "posicion": "Mediocampista",
-    "numero": 14,
-    "foto": null
-  },
-  {
-    "id": 3,
-    "nombre": "Lucas Ignacio",
-    "apellido": "Cisternas",
-    "apodo": "Lucas",
-    "posicion": "Mediocampista",
-    "numero": 10,
-    "foto": null
-  },
-  {
-    "id": 4,
-    "nombre": "Juan Mauricio",
-    "apellido": "Flores",
-    "apodo": "Mauri",
-    "posicion": "Delantero",
-    "numero": 9,
-    "foto": null
-  },
-  {
-    "id": 5,
-    "nombre": "Rodrigo Ignacio",
-    "apellido": "Guerrero",
-    "apodo": "Sangu",
-    "posicion": "Mediocampista",
-    "numero": 20,
-    "foto": null
-  },
-  {
     "id": 6,
     "nombre": "Luis Sebastián",
     "apellido": "Herrera Reynaga",
     "apodo": "",
     "posicion": "",
     "numero": null,
-    "foto": null
-  },
-  {
-    "id": 7,
-    "nombre": "Franco Matías",
-    "apellido": "Ibañez",
-    "apodo": "Bachi",
-    "posicion": "Defensor",
-    "numero": 17,
-    "foto": null
-  },
-  {
-    "id": 8,
-    "nombre": "Mauro Federico",
-    "apellido": "Juarez",
-    "apodo": "Mauro",
-    "posicion": "Delantero",
-    "numero": 11,
-    "foto": null
-  },
-  {
-    "id": 9,
-    "nombre": "José Mauro",
-    "apellido": "Leyes",
-    "apodo": "Mauro",
-    "posicion": "Mediocampista",
-    "numero": 15,
-    "foto": null
-  },
-  {
-    "id": 10,
-    "nombre": "Matías Osvaldo",
-    "apellido": "Maldonado",
-    "apodo": "Mati",
-    "posicion": "Defensor",
-    "numero": 16,
-    "foto": null
-  },
-  {
-    "id": 11,
-    "nombre": "Leandro Ariel",
-    "apellido": "Manna",
-    "apodo": "Cuervo",
-    "posicion": "Mediocampista",
-    "numero": 13,
-    "foto": null
-  },
-  {
-    "id": 12,
-    "nombre": "Alan Lionel",
-    "apellido": "Medina",
-    "apodo": "Alan",
-    "posicion": "Defensor",
-    "numero": 2,
-    "foto": null
-  },
-  {
-    "id": 13,
-    "nombre": "Matías Jorge",
-    "apellido": "Mendoza",
-    "apodo": "Cachorro",
-    "posicion": "Defensor",
-    "numero": 6,
-    "foto": null
-  },
-  {
-    "id": 14,
-    "nombre": "Mauricio Ezequiel",
-    "apellido": "Moreno",
-    "apodo": "Cube",
-    "posicion": "Defensor",
-    "numero": 18,
-    "foto": null
-  },
-  {
-    "id": 15,
-    "nombre": "Moises Eduardo",
-    "apellido": "Robles",
-    "apodo": "Chino",
-    "posicion": "Mediocampista",
-    "numero": 5,
-    "foto": null
-  },
-  {
-    "id": 16,
-    "nombre": "Gonzalo Fabián",
-    "apellido": "Sajama",
-    "apodo": "Gonza",
-    "posicion": "Defensor",
-    "numero": 4,
     "foto": null
   },
   {
@@ -153,12 +18,21 @@
     "foto": null
   },
   {
-    "id": 18,
-    "nombre": "Diego Armando",
-    "apellido": "Tolaba",
-    "apodo": "Diego",
-    "posicion": "Mediocampista",
-    "numero": 16,
+    "id": 1,
+    "nombre": "Martín Gonzalo",
+    "apellido": "Barrios Morán",
+    "apodo": "Martin",
+    "posicion": "Arquero",
+    "numero": 1,
+    "foto": null
+  },
+  {
+    "id": 12,
+    "nombre": "Alan Lionel",
+    "apellido": "Medina",
+    "apodo": "Alan",
+    "posicion": "Defensor",
+    "numero": 2,
     "foto": null
   },
   {
@@ -171,6 +45,42 @@
     "foto": null
   },
   {
+    "id": 16,
+    "nombre": "Gonzalo Fabián",
+    "apellido": "Sajama",
+    "apodo": "Gonza",
+    "posicion": "Defensor",
+    "numero": 4,
+    "foto": null
+  },
+  {
+    "id": 15,
+    "nombre": "Moises Eduardo",
+    "apellido": "Robles",
+    "apodo": "Chino",
+    "posicion": "Mediocampista",
+    "numero": 5,
+    "foto": null
+  },
+  {
+    "id": 13,
+    "nombre": "Matías Jorge",
+    "apellido": "Mendoza",
+    "apodo": "Cachorro",
+    "posicion": "Defensor",
+    "numero": 6,
+    "foto": null
+  },
+  {
+    "id": 2,
+    "nombre": "Gustavo Ezequiel",
+    "apellido": "Castillo",
+    "apodo": "Guti",
+    "posicion": "Mediocampista",
+    "numero": 7,
+    "foto": null
+  },
+  {
     "id": 20,
     "nombre": "Matias",
     "apellido": "Rosembluth",
@@ -180,12 +90,102 @@
     "foto": null
   },
   {
+    "id": 4,
+    "nombre": "Juan Mauricio",
+    "apellido": "Flores",
+    "apodo": "Mauri",
+    "posicion": "Delantero",
+    "numero": 9,
+    "foto": null
+  },
+  {
+    "id": 3,
+    "nombre": "Lucas Ignacio",
+    "apellido": "Cisternas",
+    "apodo": "Lucas",
+    "posicion": "Mediocampista",
+    "numero": 10,
+    "foto": null
+  },
+  {
+    "id": 8,
+    "nombre": "Mauro Federico",
+    "apellido": "Juarez",
+    "apodo": "Mauro",
+    "posicion": "Delantero",
+    "numero": 11,
+    "foto": null
+  },
+  {
+    "id": 11,
+    "nombre": "Leandro Ariel",
+    "apellido": "Manna",
+    "apodo": "Cuervo",
+    "posicion": "Mediocampista",
+    "numero": 13,
+    "foto": null
+  },
+  {
     "id": 21,
     "nombre": "Fernando Alberto",
     "apellido": "Gutiérrez",
     "apodo": "Pety",
     "posicion": "Mediocampista",
     "numero": 14,
+    "foto": null
+  },
+  {
+    "id": 9,
+    "nombre": "José Mauro",
+    "apellido": "Leyes",
+    "apodo": "Mauro",
+    "posicion": "Mediocampista",
+    "numero": 15,
+    "foto": null
+  },
+  {
+    "id": 18,
+    "nombre": "Diego Armando",
+    "apellido": "Tolaba",
+    "apodo": "Diego",
+    "posicion": "Mediocampista",
+    "numero": 16,
+    "foto": null
+  },
+  {
+    "id": 7,
+    "nombre": "Franco Matías",
+    "apellido": "Ibañez",
+    "apodo": "Bachi",
+    "posicion": "Defensor",
+    "numero": 17,
+    "foto": null
+  },
+  {
+    "id": 14,
+    "nombre": "Mauricio Ezequiel",
+    "apellido": "Moreno",
+    "apodo": "Cube",
+    "posicion": "Defensor",
+    "numero": 18,
+    "foto": null
+  },
+  {
+    "id": 10,
+    "nombre": "Matías Osvaldo",
+    "apellido": "Maldonado",
+    "apodo": "Mati",
+    "posicion": "Defensor",
+    "numero": 19,
+    "foto": null
+  },
+  {
+    "id": 5,
+    "nombre": "Rodrigo Ignacio",
+    "apellido": "Guerrero",
+    "apodo": "Sangu",
+    "posicion": "Mediocampista",
+    "numero": 20,
     "foto": null
   }
 ]

@@ -1,6 +1,9 @@
-# Bot de Telegram - no se sube a GitHub
+# Backend local - no se sube a GitHub
 bot.py
+admin.py
 requirements.txt
+database.sql
+templates/
 
 # Python
 __pycache__/
