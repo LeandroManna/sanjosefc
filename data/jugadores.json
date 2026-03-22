@@ -182,19 +182,10 @@
   {
     "id": 21,
     "nombre": "Fernando",
-    "apellido": "Pety",
-    "apodo": "Pety",
-    "posicion": "Mediocampista",
-    "numero": 14,
-    "foto": null
-  },
-  {
-    "id": 22,
-    "nombre": "Fernando",
     "apellido": "Gutiérrez",
     "apodo": "Pety",
     "posicion": "Mediocampista",
-    "numero": 5,
+    "numero": 14,
     "foto": null
   }
 ]
