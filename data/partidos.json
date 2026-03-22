@@ -62,7 +62,20 @@
     "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 7,
     "jugadores": [],
-    "goles": [],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 45
+      }
+    ],
     "amarillas": [],
     "rojas": []
   },
@@ -84,6 +97,10 @@
       {
         "jugadorId": 8,
         "minuto": 15
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 45
       }
     ],
     "amarillas": [],
