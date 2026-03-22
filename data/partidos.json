@@ -8,13 +8,30 @@
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 6,
-    "jugadores": [],
+    "jugadores": [
+      21
+    ],
     "goles": [
-      { "jugadorId": 8, "minuto": 10 },
-      { "jugadorId": 8, "minuto": 15 },
-      { "jugadorId": 8, "minuto": 20 },
-      { "jugadorId": 8, "minuto": 25 },
-      { "jugadorId": 8, "minuto": 30 }
+      {
+        "jugadorId": 8,
+        "minuto": 10
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 15
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 30
+      }
     ],
     "amarillas": [],
     "rojas": []
@@ -44,8 +61,14 @@
     "jornada": 7,
     "jugadores": [],
     "goles": [
-      { "jugadorId": 8, "minuto": 10 },
-      { "jugadorId": 8, "minuto": 15 }
+      {
+        "jugadorId": 8,
+        "minuto": 10
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 15
+      }
     ],
     "amarillas": [],
     "rojas": []
@@ -62,11 +85,20 @@
     "jugadores": [],
     "goles": [],
     "amarillas": [
-      { "jugadorId": 20, "minuto": 25 },
-      { "jugadorId": 20, "minuto": 50 }
+      {
+        "jugadorId": 20,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 20,
+        "minuto": 50
+      }
     ],
     "rojas": [
-        { "jugadorId": 20, "minuto": 50 }
+      {
+        "jugadorId": 20,
+        "minuto": 50
+      }
     ]
   },
   {
@@ -80,12 +112,30 @@
     "jornada": 9,
     "jugadores": [],
     "goles": [
-      { "jugadorId": 8, "minuto": 10 },
-      { "jugadorId": 8, "minuto": 15 },
-      { "jugadorId": 8, "minuto": 20 },
-      { "jugadorId": 8, "minuto": 25 },
-      { "jugadorId": 8, "minuto": 30 },
-      { "jugadorId": 8, "minuto": 40 }
+      {
+        "jugadorId": 8,
+        "minuto": 10
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 15
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 40
+      }
     ],
     "amarillas": [],
     "rojas": []
@@ -101,14 +151,26 @@
     "jornada": 9,
     "jugadores": [],
     "goles": [
-      { "jugadorId": 8, "minuto": 40 }
+      {
+        "jugadorId": 8,
+        "minuto": 40
+      }
     ],
     "amarillas": [
-      { "jugadorId": 21, "minuto": 25 },
-      { "jugadorId": 21, "minuto": 50 }
+      {
+        "jugadorId": 21,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 21,
+        "minuto": 50
+      }
     ],
     "rojas": [
-        { "jugadorId": 21, "minuto": 50 }
+      {
+        "jugadorId": 21,
+        "minuto": 50
+      }
     ]
   },
   {
@@ -122,20 +184,41 @@
     "jornada": 10,
     "jugadores": [],
     "goles": [
-      { "jugadorId": 2, "minuto": 10 },
-      { "jugadorId": 11, "minuto": 30 },
-      { "jugadorId": 2, "minuto": 65 }
+      {
+        "jugadorId": 2,
+        "minuto": 10
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 2,
+        "minuto": 65
+      }
     ],
     "amarillas": [
-      { "jugadorId": 15, "minuto": 25 },
-      { "jugadorId": 15, "minuto": 50 },
-      { "jugadorId": 14, "minuto": 55 }
+      {
+        "jugadorId": 15,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 15,
+        "minuto": 50
+      },
+      {
+        "jugadorId": 14,
+        "minuto": 55
+      }
     ],
     "rojas": [
-      { "jugadorId": 15, "minuto": 50 }
+      {
+        "jugadorId": 15,
+        "minuto": 50
+      }
     ]
   },
-    {
+  {
     "id": 8,
     "fecha": "2026-03-24",
     "rival": "Cucharita ST",

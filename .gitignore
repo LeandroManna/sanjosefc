@@ -1,0 +1,13 @@
+# Bot de Telegram - no se sube a GitHub
+bot.py
+requirements.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Sistema
+.DS_Store
+Thumbs.db
