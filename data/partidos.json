@@ -51,15 +51,27 @@
       },
       {
         "jugadorId": 4,
-        "minuto": 28
+        "minuto": 35
       },
       {
         "jugadorId": 8,
-        "minuto": 30
+        "minuto": 40
       },
       {
         "jugadorId": 4,
-        "minuto": 33
+        "minuto": 45
+      },
+      {
+        "jugadorId": 18,
+        "minuto": 50
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 55
+      },
+      {
+        "jugadorId": 3,
+        "minuto": 60
       }
     ],
     "amarillas": [],
@@ -181,6 +193,10 @@
       {
         "jugadorId": 8,
         "minuto": 40
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 45
       }
     ],
     "amarillas": [],
@@ -267,19 +283,5 @@
         "minuto": 50
       }
     ]
-  },
-  {
-    "id": 8,
-    "fecha": "2026-03-24",
-    "rival": "Cucharita ST",
-    "golesLocal": 0,
-    "golesVisitante": 0,
-    "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 11,
-    "jugadores": [],
-    "goles": [],
-    "amarillas": [],
-    "rojas": []
   }
 ]
