@@ -57,8 +57,8 @@ function calcularEstadisticas() {
 function calcularResumenEquipo() {
   let g = 0, e = 0, p = 0, gf = 0, gc = 0;
   partidos.forEach(part => {
-    const propio = part.condicion === 'local' ? part.golesLocal : part.golesVisitante;
-    const rival = part.condicion === 'local' ? part.golesVisitante : part.golesLocal;
+    const propio = Number(part.condicion === 'local' ? part.golesLocal : part.golesVisitante);
+    const rival  = Number(part.condicion === 'local' ? part.golesVisitante : part.golesLocal);
     gf += propio; gc += rival;
     if (propio > rival) g++;
     else if (propio < rival) p++;

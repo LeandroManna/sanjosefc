@@ -39,7 +39,7 @@
     "id": 5,
     "nombre": "Rodrigo Ignacio",
     "apellido": "Guerrero",
-    "apodo": "Rodri",
+    "apodo": "Sangu",
     "posicion": "Mediocampista",
     "numero": 20,
     "foto": null
@@ -66,7 +66,7 @@
     "id": 8,
     "nombre": "Mauro Federico",
     "apellido": "Juarez",
-    "apodo": "Mau",
+    "apodo": "Mauro",
     "posicion": "Delantero",
     "numero": 11,
     "foto": null
@@ -168,6 +168,24 @@
     "apodo": "Rifle",
     "posicion": "Defensor",
     "numero": 3,
+    "foto": null
+  },
+  {
+    "id": 19,
+    "nombre": "Matias",
+    "apellido": "Rosembluth",
+    "apodo": "Mati Rosen",
+    "posicion": "Mediocampista",
+    "numero": 8,
+    "foto": null
+  },
+    {
+    "id": 19,
+    "nombre": "Fernando",
+    "apellido": "Pety",
+    "apodo": "Pety",
+    "posicion": "Mediocampista",
+    "numero": 14,
     "foto": null
   }
 ]

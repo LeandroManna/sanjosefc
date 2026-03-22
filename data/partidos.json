@@ -9,7 +9,13 @@
     "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 6,
     "jugadores": [],
-    "goles": [],
+    "goles": [
+      { "jugadorId": 8, "minuto": 10 },
+      { "jugadorId": 8, "minuto": 15 },
+      { "jugadorId": 8, "minuto": 20 },
+      { "jugadorId": 8, "minuto": 25 },
+      { "jugadorId": 8, "minuto": 30 }
+    ],
     "amarillas": [],
     "rojas": []
   },
@@ -37,7 +43,10 @@
     "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 7,
     "jugadores": [],
-    "goles": [],
+    "goles": [
+      { "jugadorId": 8, "minuto": 10 },
+      { "jugadorId": 8, "minuto": 15 }
+    ],
     "amarillas": [],
     "rojas": []
   },
@@ -65,7 +74,14 @@
     "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 9,
     "jugadores": [],
-    "goles": [],
+    "goles": [
+      { "jugadorId": 8, "minuto": 10 },
+      { "jugadorId": 8, "minuto": 15 },
+      { "jugadorId": 8, "minuto": 20 },
+      { "jugadorId": 8, "minuto": 25 },
+      { "jugadorId": 8, "minuto": 30 },
+      { "jugadorId": 8, "minuto": 40 }
+    ],
     "amarillas": [],
     "rojas": []
   },
@@ -79,9 +95,16 @@
     "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 9,
     "jugadores": [],
-    "goles": [],
-    "amarillas": [],
-    "rojas": []
+    "goles": [
+      { "jugadorId": 8, "minuto": 40 }
+    ],
+    "amarillas": [
+      { "jugadorId": 19, "minuto": 25 },
+      { "jugadorId": 19, "minuto": 50 }
+    ],
+    "rojas": [
+        { "jugadorId": 19, "minuto": 50 }
+    ]
   },
   {
     "id": 7,
@@ -100,10 +123,25 @@
     ],
     "amarillas": [
       { "jugadorId": 15, "minuto": 25 },
-      { "jugadorId": 15, "minuto": 50 }
+      { "jugadorId": 15, "minuto": 50 },
+      { "jugadorId": 14, "minuto": 55 }
     ],
     "rojas": [
       { "jugadorId": 15, "minuto": 50 }
     ]
+  },
+    {
+    "id": 8,
+    "fecha": "2026-03-24",
+    "rival": "Cucharita ST",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 11,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
   }
 ]
