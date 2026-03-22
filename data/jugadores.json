@@ -1,23 +1,5 @@
 [
   {
-    "id": 6,
-    "nombre": "Luis Sebastián",
-    "apellido": "Herrera Reynaga",
-    "apodo": "",
-    "posicion": "",
-    "numero": null,
-    "foto": null
-  },
-  {
-    "id": 17,
-    "nombre": "Cristian Omar",
-    "apellido": "Toconas",
-    "apodo": "",
-    "posicion": "",
-    "numero": null,
-    "foto": null
-  },
-  {
     "id": 1,
     "nombre": "Martín Gonzalo",
     "apellido": "Barrios Morán",
@@ -186,6 +168,24 @@
     "apodo": "Sangu",
     "posicion": "Mediocampista",
     "numero": 20,
+    "foto": null
+  },
+  {
+    "id": 6,
+    "nombre": "Luis Sebastián",
+    "apellido": "Herrera Reynaga",
+    "apodo": "Chino",
+    "posicion": "Delantero",
+    "numero": 21,
+    "foto": null
+  },
+  {
+    "id": 17,
+    "nombre": "Cristian Omar",
+    "apellido": "Toconas",
+    "apodo": "Cristian",
+    "posicion": "Defensor",
+    "numero": 22,
     "foto": null
   }
 ]
