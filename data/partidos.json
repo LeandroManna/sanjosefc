@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "fecha": "2026-02-21",
+    "rival": "Los Rejuntados ST",
+    "golesLocal": 12,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 6,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 2,
+    "fecha": "2026-02-28",
+    "rival": "San Isidro ST",
+    "golesLocal": 3,
+    "golesVisitante": 3,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 7,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 3,
+    "fecha": "2026-02-28",
+    "rival": "EPAM 3 ST",
+    "golesLocal": 3,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 7,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 4,
+    "fecha": "2026-03-07",
+    "rival": "Los Diegotes ST",
+    "golesLocal": 0,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 8,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 5,
+    "fecha": "2026-03-14",
+    "rival": "Cucharita ST",
+    "golesLocal": 0,
+    "golesVisitante": 7,
+    "condicion": "visitante",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 9,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 6,
+    "fecha": "2026-03-14",
+    "rival": "San Pedrito FC ST",
+    "golesLocal": 2,
+    "golesVisitante": 2,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 9,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 7,
+    "fecha": "2026-03-21",
+    "rival": "Doberman ST",
+    "golesLocal": 3,
+    "golesVisitante": 2,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 10,
+    "jugadores": [],
+    "goles": [
+      { "jugadorId": 2, "minuto": 10 },
+      { "jugadorId": 11, "minuto": 30 },
+      { "jugadorId": 2, "minuto": 65 }
+    ],
+    "amarillas": [
+      { "jugadorId": 15, "minuto": 25 },
+      { "jugadorId": 15, "minuto": 50 }
+    ],
+    "rojas": [
+      { "jugadorId": 15, "minuto": 50 }
+    ]
+  }
+]
