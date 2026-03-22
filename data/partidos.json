@@ -61,8 +61,13 @@
     "jornada": 8,
     "jugadores": [],
     "goles": [],
-    "amarillas": [],
-    "rojas": []
+    "amarillas": [
+      { "jugadorId": 20, "minuto": 25 },
+      { "jugadorId": 20, "minuto": 50 }
+    ],
+    "rojas": [
+        { "jugadorId": 20, "minuto": 50 }
+    ]
   },
   {
     "id": 5,
@@ -99,11 +104,11 @@
       { "jugadorId": 8, "minuto": 40 }
     ],
     "amarillas": [
-      { "jugadorId": 19, "minuto": 25 },
-      { "jugadorId": 19, "minuto": 50 }
+      { "jugadorId": 21, "minuto": 25 },
+      { "jugadorId": 21, "minuto": 50 }
     ],
     "rojas": [
-        { "jugadorId": 19, "minuto": 50 }
+        { "jugadorId": 21, "minuto": 50 }
     ]
   },
   {
