@@ -317,5 +317,94 @@
       }
     ],
     "rojas": []
+  },
+  {
+    "id": 10,
+    "fecha": "2026-03-28",
+    "rival": "ATLETICO ALBERDI ST",
+    "golesLocal": 2,
+    "golesVisitante": 5,
+    "condicion": "visitante",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 12,
+    "jugadores": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 40
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 45
+      },
+      {
+        "jugadorId": 3,
+        "minuto": 50
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 55
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 60
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 11,
+    "fecha": "2026-03-28",
+    "rival": "UNION ALTO BERTRES ST",
+    "golesLocal": 3,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 12,
+    "jugadores": [
+      1,
+      3,
+      7,
+      9,
+      11,
+      12,
+      13,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 45
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 55
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 65
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
   }
 ]
