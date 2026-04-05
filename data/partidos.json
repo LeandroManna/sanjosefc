@@ -7,7 +7,7 @@
     "golesVisitante": 1,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 6,
+    "jornada": 5,
     "jugadores": [
       1,
       2,
@@ -85,7 +85,7 @@
     "golesVisitante": 3,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 7,
+    "jornada": 6,
     "jugadores": [],
     "goles": [
       {
@@ -112,7 +112,7 @@
     "golesVisitante": 1,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 7,
+    "jornada": 6,
     "jugadores": [],
     "goles": [
       {
@@ -139,7 +139,7 @@
     "golesVisitante": 1,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 8,
+    "jornada": 7,
     "jugadores": [],
     "goles": [],
     "amarillas": [
@@ -167,7 +167,7 @@
     "golesVisitante": 7,
     "condicion": "visitante",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 9,
+    "jornada": 8,
     "jugadores": [],
     "goles": [
       {
@@ -210,7 +210,7 @@
     "golesVisitante": 2,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 9,
+    "jornada": 8,
     "jugadores": [],
     "goles": [
       {
@@ -247,7 +247,7 @@
     "golesVisitante": 2,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 10,
+    "jornada": 9,
     "jugadores": [],
     "goles": [
       {
@@ -292,7 +292,7 @@
     "golesVisitante": 0,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 11,
+    "jornada": 10,
     "jugadores": [
       1,
       3,
@@ -326,7 +326,7 @@
     "golesVisitante": 5,
     "condicion": "visitante",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 12,
+    "jornada": 11,
     "jugadores": [
       1,
       3,
@@ -375,7 +375,7 @@
     "golesVisitante": 1,
     "condicion": "local",
     "torneo": "Liga Asociación Sur - Estándar",
-    "jornada": 12,
+    "jornada": 11,
     "jugadores": [
       1,
       3,
@@ -406,5 +406,68 @@
     ],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "id": 12,
+    "fecha": "2026-04-04",
+    "rival": "DEP. ALTE. BROWN",
+    "golesLocal": 2,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "torneo": "Liga Asociación Sur - Estándar",
+    "jornada": 12,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      11,
+      13,
+      15,
+      18,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 50
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 70
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 7,
+        "minuto": 15
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 7,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 70
+      }
+    ],
+    "rojas": [
+      {
+        "jugadorId": 7,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 70
+      }
+    ]
   }
 ]
