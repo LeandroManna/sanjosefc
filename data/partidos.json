@@ -1,12 +1,13 @@
 [
   {
     "id": 1,
+    "torneoId": 1,
     "fecha": "2026-02-21",
+    "equipoId": 13,
     "rival": "Los Rejuntados ST",
     "golesLocal": 12,
     "golesVisitante": 1,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 5,
     "jugadores": [
       1,
@@ -43,7 +44,7 @@
       },
       {
         "jugadorId": 4,
-        "minuto": 20
+        "minuto": 23
       },
       {
         "jugadorId": 8,
@@ -51,7 +52,7 @@
       },
       {
         "jugadorId": 4,
-        "minuto": 35
+        "minuto": 33
       },
       {
         "jugadorId": 8,
@@ -79,12 +80,13 @@
   },
   {
     "id": 2,
+    "torneoId": 1,
     "fecha": "2026-02-28",
+    "equipoId": 7,
     "rival": "San Isidro ST",
     "golesLocal": 3,
     "golesVisitante": 3,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 6,
     "jugadores": [],
     "goles": [
@@ -106,12 +108,13 @@
   },
   {
     "id": 3,
+    "torneoId": 1,
     "fecha": "2026-02-28",
+    "equipoId": 9,
     "rival": "EPAM 3 ST",
     "golesLocal": 3,
     "golesVisitante": 1,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 6,
     "jugadores": [],
     "goles": [
@@ -133,12 +136,13 @@
   },
   {
     "id": 4,
+    "torneoId": 1,
     "fecha": "2026-03-07",
+    "equipoId": 1,
     "rival": "Los Diegotes ST",
     "golesLocal": 0,
     "golesVisitante": 1,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 7,
     "jugadores": [],
     "goles": [],
@@ -161,12 +165,13 @@
   },
   {
     "id": 5,
+    "torneoId": 1,
     "fecha": "2026-03-14",
+    "equipoId": 11,
     "rival": "Cucharita ST",
     "golesLocal": 0,
     "golesVisitante": 7,
     "condicion": "visitante",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 8,
     "jugadores": [],
     "goles": [
@@ -204,12 +209,13 @@
   },
   {
     "id": 6,
+    "torneoId": 1,
     "fecha": "2026-03-14",
+    "equipoId": 8,
     "rival": "San Pedrito FC ST",
     "golesLocal": 2,
     "golesVisitante": 2,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 8,
     "jugadores": [],
     "goles": [
@@ -241,28 +247,16 @@
   },
   {
     "id": 7,
+    "torneoId": 1,
     "fecha": "2026-03-21",
+    "equipoId": 5,
     "rival": "Doberman ST",
-    "golesLocal": 3,
-    "golesVisitante": 2,
+    "golesLocal": 0,
+    "golesVisitante": 3,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 9,
     "jugadores": [],
-    "goles": [
-      {
-        "jugadorId": 2,
-        "minuto": 10
-      },
-      {
-        "jugadorId": 11,
-        "minuto": 30
-      },
-      {
-        "jugadorId": 2,
-        "minuto": 65
-      }
-    ],
+    "goles": [],
     "amarillas": [
       {
         "jugadorId": 15,
@@ -286,12 +280,13 @@
   },
   {
     "id": 9,
+    "torneoId": 1,
     "fecha": "2026-03-24",
+    "equipoId": 11,
     "rival": "Cucharita ST",
     "golesLocal": 3,
     "golesVisitante": 0,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 10,
     "jugadores": [
       1,
@@ -309,7 +304,20 @@
       20,
       21
     ],
-    "goles": [],
+    "goles": [
+      {
+        "jugadorId": 22,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 22,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 22,
+        "minuto": 35
+      }
+    ],
     "amarillas": [
       {
         "jugadorId": 20,
@@ -320,12 +328,13 @@
   },
   {
     "id": 10,
+    "torneoId": 1,
     "fecha": "2026-03-28",
+    "equipoId": 3,
     "rival": "ATLETICO ALBERDI ST",
     "golesLocal": 2,
     "golesVisitante": 5,
     "condicion": "visitante",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 11,
     "jugadores": [
       1,
@@ -369,12 +378,13 @@
   },
   {
     "id": 11,
+    "torneoId": 1,
     "fecha": "2026-03-28",
+    "equipoId": 10,
     "rival": "UNION ALTO BERTRES ST",
     "golesLocal": 3,
     "golesVisitante": 1,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 11,
     "jugadores": [
       1,
@@ -409,12 +419,13 @@
   },
   {
     "id": 12,
+    "torneoId": 1,
     "fecha": "2026-04-04",
+    "equipoId": null,
     "rival": "DEP. ALTE. BROWN",
     "golesLocal": 2,
     "golesVisitante": 0,
     "condicion": "local",
-    "torneo": "Liga Asociación Sur - Estándar",
     "jornada": 12,
     "jugadores": [
       1,
@@ -469,5 +480,49 @@
         "minuto": 70
       }
     ]
+  },
+  {
+    "id": 13,
+    "torneoId": 1,
+    "fecha": "2026-04-11",
+    "equipoId": 3,
+    "rival": "ATLETICO ALBERDI ST",
+    "golesLocal": 2,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 13,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      11,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 20,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 13,
+        "minuto": 30
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 20,
+        "minuto": 30
+      }
+    ],
+    "rojas": []
   }
 ]

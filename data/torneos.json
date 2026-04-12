@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "nombre": "Apertura 2026",
+    "anio": 2026,
+    "fase": "apertura",
+    "activo": 1,
+    "fecha_inicio": "2026-02-01",
+    "fecha_fin": null
+  }
+]

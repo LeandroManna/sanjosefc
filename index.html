@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>San Jose FC — Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -11,15 +11,17 @@
       --verde:      #1a8a3e;
       --verde-dark: #0f5c27;
       --verde-glow: #22c55e;
+      --azul:       #2563eb;
+      --azul-glow:  #60a5fa;
       --negro:      #0a0e0c;
       --card-bg:    #101810;
       --card-border:#1f2e23;
-      --text-primary: #e8f5ec;
-      --text-muted:   #7a9e85;
-      --accent:     #f0c040;
+      --text-primary:#e8f5ec;
+      --text-muted:  #7a9e85;
+      --accent:      #f0c040;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
+    *,*::before,*::after { box-sizing:border-box; }
 
     body {
       background: var(--negro);
@@ -27,263 +29,167 @@
       font-family: 'Barlow', sans-serif;
       min-height: 100vh;
       background-image:
-        radial-gradient(ellipse at 20% 0%, rgba(26,138,62,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 100%, rgba(26,138,62,0.08) 0%, transparent 60%);
+        radial-gradient(ellipse at 20% 0%, rgba(26,138,62,.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(26,138,62,.08) 0%, transparent 60%);
     }
 
-    /* ─── HEADER ─── */
+    /* ── HEADER ── */
     .site-header {
       background: linear-gradient(135deg, var(--negro) 0%, #0d1f11 100%);
       border-bottom: 2px solid var(--verde);
       padding: 1.2rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 30px rgba(26,138,62,0.25);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 4px 30px rgba(26,138,62,.25);
     }
     .escudo-wrap {
-      width: 54px; height: 54px;
-      background: var(--verde);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 0 20px rgba(26,138,62,0.6);
-      flex-shrink: 0;
+      width:54px; height:54px; background:var(--verde); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; font-size:1.8rem;
+      box-shadow: 0 0 20px rgba(26,138,62,.6); flex-shrink:0;
     }
-    .club-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 3px;
-      color: #fff;
-      line-height: 1;
-    }
-    .club-sub {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 4px;
-      color: var(--verde-glow);
-      text-transform: uppercase;
-    }
-    .season-tag {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      background: rgba(26,138,62,0.2);
-      border: 1px solid var(--verde);
-      color: var(--verde-glow);
-      padding: .3rem .8rem;
-      border-radius: 20px;
-    }
+    .club-name  { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:3px; color:#fff; line-height:1; }
+    .club-sub   { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; letter-spacing:4px; color:var(--verde-glow); text-transform:uppercase; }
+    .season-tag { font-family:'Barlow Condensed',sans-serif; font-size:.8rem; letter-spacing:2px;
+                  background:rgba(26,138,62,.2); border:1px solid var(--verde); color:var(--verde-glow);
+                  padding:.3rem .8rem; border-radius:20px; }
 
-    /* ─── CARDS ─── */
+    /* ── CARDS ── */
     .card-dark {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 1.4rem;
+      background:var(--card-bg); border:1px solid var(--card-border);
+      border-radius:12px; padding:1.4rem;
     }
     .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.35rem;
-      letter-spacing: 3px;
-      color: var(--verde-glow);
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: .5rem;
-      margin-bottom: 1.2rem;
+      font-family:'Bebas Neue',sans-serif; font-size:1.35rem; letter-spacing:3px;
+      color:var(--verde-glow); border-bottom:1px solid var(--card-border);
+      padding-bottom:.5rem; margin-bottom:1.2rem;
     }
 
-    /* ─── STAT BOXES ─── */
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: .75rem;
-    }
-    @media (max-width: 768px) {
-      .stat-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    /* ── STAT BOXES ── */
+    .stat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.75rem; }
+    @media(max-width:768px){ .stat-grid{ grid-template-columns:repeat(2,1fr); } }
     .stat-box {
-      background: rgba(26,138,62,0.07);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 1rem .75rem;
-      text-align: center;
-      transition: border-color .2s;
+      background:rgba(26,138,62,.07); border:1px solid var(--card-border);
+      border-radius:10px; padding:1rem .75rem; text-align:center; transition:border-color .2s;
     }
-    .stat-box:hover { border-color: var(--verde); }
-    .stat-box .value {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.2rem;
-      color: #fff;
-      line-height: 1;
-    }
-    .stat-box .label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: .7rem;
-      letter-spacing: 2px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-top: .2rem;
-    }
-    .stat-box.highlight .value { color: var(--verde-glow); }
-    .stat-box.highlight-pts .value { color: var(--accent); }
+    .stat-box:hover { border-color:var(--verde); }
+    .stat-box .value { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:#fff; line-height:1; }
+    .stat-box .label { font-family:'Barlow Condensed',sans-serif; font-size:.7rem; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; margin-top:.2rem; }
+    .stat-box.highlight .value     { color:var(--verde-glow); }
+    .stat-box.highlight-pts .value { color:var(--accent); }
 
-    /* ─── FORMA ─── */
+    /* ── FORMA ── */
     .forma-badge {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 30px; height: 30px;
-      border-radius: 6px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: .95rem;
-      margin-right: 4px;
+      display:inline-flex; align-items:center; justify-content:center;
+      width:30px; height:30px; border-radius:6px;
+      font-family:'Bebas Neue',sans-serif; font-size:.95rem; margin-right:4px;
     }
-    .forma-w { background: rgba(76,175,80,0.25); color: #4caf50; border: 1px solid #4caf50; }
-    .forma-d { background: rgba(255,193,7,0.2);  color: #ffc107; border: 1px solid #ffc107; }
-    .forma-l { background: rgba(244,67,54,0.2);  color: #f44336; border: 1px solid #f44336; }
+    .forma-w { background:rgba(76,175,80,.25);  color:#4caf50; border:1px solid #4caf50; }
+    .forma-d { background:rgba(255,193,7,.2);   color:#ffc107; border:1px solid #ffc107; }
+    .forma-l { background:rgba(244,67,54,.2);   color:#f44336; border:1px solid #f44336; }
 
-    /* ─── TABLA PARTIDOS ─── */
-    .table-dark-custom {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: .875rem;
-    }
+    /* ── TABLA GENÉRICA ── */
+    .table-dark-custom { width:100%; border-collapse:collapse; font-size:.875rem; }
     .table-dark-custom th {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: .7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      padding: .6rem .8rem;
-      border-bottom: 1px solid var(--card-border);
-      white-space: nowrap;
+      font-family:'Barlow Condensed',sans-serif; font-size:.7rem; letter-spacing:2px;
+      text-transform:uppercase; color:var(--text-muted); padding:.6rem .8rem;
+      border-bottom:1px solid var(--card-border); white-space:nowrap;
     }
-    .table-dark-custom td {
-      padding: .7rem .8rem;
-      border-bottom: 1px solid rgba(31,46,35,0.6);
-      vertical-align: middle;
-    }
-    .table-dark-custom tr:last-child td { border-bottom: none; }
-    .table-dark-custom tr:hover td { background: rgba(26,138,62,0.05); }
+    .table-dark-custom td { padding:.7rem .8rem; border-bottom:1px solid rgba(31,46,35,.6); vertical-align:middle; }
+    .table-dark-custom tr:last-child td { border-bottom:none; }
+    .table-dark-custom tr:hover td { background:rgba(26,138,62,.05); }
+    .table-responsive-wrap { overflow-x:auto; }
 
-    .badge-local  { background: rgba(26,138,62,0.2); color: var(--verde-glow); border: 1px solid var(--verde); font-size: .65rem; letter-spacing: 1px; }
-    .badge-visita { background: rgba(100,100,100,0.15); color: #aaa; border: 1px solid #444; font-size: .65rem; letter-spacing: 1px; }
+    /* ── POSICIONES ── */
+    .fila-propia   { background:rgba(26,138,62,.1) !important; }
+    .text-verde-glow { color:var(--verde-glow) !important; }
+    .pos-num       { font-family:'Bebas Neue',sans-serif; font-size:1.05rem; }
+    .equipo-nombre-cell { font-weight:500; }
+    .stat-cell     { color:var(--text-muted); }
+    .pts-cell      { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--accent); }
+    .pos-fecha     { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; letter-spacing:1px; color:var(--text-muted); }
 
-    .marcador {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-    }
-    .dg-badge {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: .85rem;
-      padding: .15rem .45rem;
-      border-radius: 4px;
-    }
-    .dg-pos { background: rgba(76,175,80,0.15); color: #4caf50; }
-    .dg-neu { background: rgba(255,193,7,0.1);  color: #ffc107; }
-    .dg-neg { background: rgba(244,67,54,0.12); color: #f44336; }
+    /* ── DG BADGE ── */
+    .dg-badge { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.85rem; padding:.15rem .45rem; border-radius:4px; }
+    .dg-pos   { background:rgba(76,175,80,.15);  color:#4caf50; }
+    .dg-neu   { background:rgba(255,193,7,.1);   color:#ffc107; }
+    .dg-neg   { background:rgba(244,67,54,.12);  color:#f44336; }
 
-    .resultado-tag { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: .75rem; letter-spacing: 1px; }
-    .rival-nombre { font-weight: 600; }
-    .fecha-texto  { color: var(--text-muted); font-size: .8rem; white-space: nowrap; }
+    /* ── PARTIDOS ── */
+    .badge-local  { background:rgba(26,138,62,.2); color:var(--verde-glow); border:1px solid var(--verde); font-size:.65rem; letter-spacing:1px; }
+    .badge-visita { background:rgba(100,100,100,.15); color:#aaa; border:1px solid #444; font-size:.65rem; letter-spacing:1px; }
+    .marcador     { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:2px; }
+    .resultado-tag{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.75rem; letter-spacing:1px; }
+    .rival-nombre { font-weight:600; }
+    .fecha-texto  { color:var(--text-muted); font-size:.8rem; white-space:nowrap; }
     .goleador-tag {
-      display: inline-block;
-      background: rgba(26,138,62,0.12);
-      border: 1px solid rgba(26,138,62,0.3);
-      border-radius: 4px;
-      font-size: .72rem;
-      padding: .1rem .4rem;
-      margin: 2px;
-      color: var(--verde-glow);
-      white-space: nowrap;
+      display:inline-block; background:rgba(26,138,62,.12); border:1px solid rgba(26,138,62,.3);
+      border-radius:4px; font-size:.72rem; padding:.1rem .4rem; margin:2px; color:var(--verde-glow); white-space:nowrap;
     }
-    .goles-cell { max-width: 260px; }
-
-    /* ─── FILTROS ─── */
+    .goles-cell { max-width:260px; }
     .btn-filtro {
-      background: transparent;
-      border: 1px solid var(--card-border);
-      color: var(--text-muted);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: .75rem;
-      letter-spacing: 1px;
-      padding: .3rem .8rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all .2s;
+      background:transparent; border:1px solid var(--card-border); color:var(--text-muted);
+      font-family:'Barlow Condensed',sans-serif; font-size:.75rem; letter-spacing:1px;
+      padding:.3rem .8rem; border-radius:6px; cursor:pointer; transition:all .2s;
     }
-    .btn-filtro:hover, .btn-filtro.active {
-      background: var(--verde);
-      border-color: var(--verde);
-      color: #fff;
-    }
+    .btn-filtro:hover,.btn-filtro.active { background:var(--verde); border-color:var(--verde); color:#fff; }
 
-    /* ─── TABLA JUGADORES ─── */
-    .jugador-info   { display: flex; align-items: center; gap: .75rem; }
-    .avatar {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      color: #fff;
-      flex-shrink: 0;
-    }
-    .jugador-nombre { font-weight: 600; font-size: .9rem; }
-    .jugador-apodo  { font-size: .75rem; color: var(--text-muted); font-style: italic; }
-    .num-badge {
-      display: inline-block;
-      background: rgba(26,138,62,0.2);
-      color: var(--verde-glow);
-      border: 1px solid var(--verde);
-      border-radius: 4px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      padding: 0 .5rem;
-      min-width: 28px;
-      text-align: center;
-    }
-    .stat-gol      { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--verde-glow); }
-    .stat-amarilla { font-size: .85rem; }
-    .stat-roja     { font-size: .85rem; }
+    /* ── JUGADORES ── */
+    .jugador-info { display:flex; align-items:center; gap:.75rem; }
+    .avatar       { width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1rem; color:#fff; flex-shrink:0; }
+    .jugador-nombre{ font-weight:600; font-size:.9rem; }
+    .jugador-apodo { font-size:.75rem; color:var(--text-muted); font-style:italic; }
+    .num-badge    { display:inline-block; background:rgba(26,138,62,.2); color:var(--verde-glow); border:1px solid var(--verde); border-radius:4px; font-family:'Bebas Neue',sans-serif; font-size:1rem; padding:0 .5rem; min-width:28px; text-align:center; }
+    .stat-gol     { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--verde-glow); }
 
-    /* ─── DONUT ─── */
-    #donut-resultados { width: 160px; height: 160px; display: block; margin: 0 auto; }
-    .leyenda-item {
-      display: flex; align-items: center; gap: .5rem;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: .9rem;
-      color: var(--text-muted);
-      margin-bottom: .4rem;
-    }
-    .leyenda-item strong { color: var(--text-primary); margin-left: auto; }
-    .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink:0; }
+    /* ── DONUT ── */
+    #donut-resultados { width:160px; height:160px; display:block; margin:0 auto; }
+    .leyenda-item { display:flex; align-items:center; gap:.5rem; font-family:'Barlow Condensed',sans-serif; font-size:.9rem; color:var(--text-muted); margin-bottom:.4rem; }
+    .leyenda-item strong { color:var(--text-primary); margin-left:auto; }
+    .dot { width:10px; height:10px; border-radius:50%; display:inline-block; flex-shrink:0; }
 
-    /* ─── TOP GOLEADORES ─── */
-    .top-goleador-item { margin-bottom: 1rem; }
-    .goleador-name     { font-family: 'Barlow Condensed', sans-serif; font-size: .95rem; font-weight: 600; }
-    .goles-count       { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--verde-glow); }
-    .gol-bar           { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; }
-    .gol-bar .progress-bar { background: linear-gradient(90deg, var(--verde), var(--verde-glow)); border-radius: 3px; }
+    /* ── TOP GOLEADORES ── */
+    .top-goleador-item { margin-bottom:1rem; }
+    .goleador-name { font-family:'Barlow Condensed',sans-serif; font-size:.95rem; font-weight:600; }
+    .goles-count   { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--verde-glow); }
+    .gol-bar       { height:6px; background:rgba(255,255,255,.06); border-radius:3px; }
+    .gol-bar .progress-bar { background:linear-gradient(90deg,var(--verde),var(--verde-glow)); border-radius:3px; }
 
-    /* ─── RESPONSIVE TABLE ─── */
-    .table-responsive-wrap { overflow-x: auto; }
+    /* ── TIEMPOS ── */
+    .tiempo-label  { font-family:'Barlow Condensed',sans-serif; font-size:.7rem; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; }
+    .domina-badge  { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; font-weight:700; color:var(--verde-glow); }
+    .barra-split   { display:flex; height:10px; border-radius:6px; overflow:hidden; }
+    .barra-split-t1{ background:var(--verde); transition:width .5s; }
+    .barra-split-t2{ background:var(--azul);  transition:width .5s; }
+    .tiempo-box    { background:rgba(26,138,62,.06); border:1px solid var(--card-border); border-radius:10px; padding:1rem .9rem; }
+    .border-verde  { border-left:3px solid var(--verde) !important; }
+    .border-azul   { border-left:3px solid var(--azul)  !important; }
+    .tiempo-box-label { font-family:'Barlow Condensed',sans-serif; font-size:.65rem; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; }
+    .tiempo-rango  { font-size:.6rem; opacity:.6; }
+    .tiempo-box-valor { font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--verde-glow); line-height:1; }
+    .text-azul     { color:var(--azul-glow) !important; }
+    .tiempo-box-sub{ font-family:'Barlow Condensed',sans-serif; font-size:.72rem; color:var(--text-muted); margin-top:.2rem; }
+    .tarj-box      { border:1px solid var(--card-border); border-radius:10px; padding:.9rem .7rem; text-align:center; }
+    .box-amarilla  { background:rgba(255,193,7,.05); border-color:rgba(255,193,7,.2); }
+    .box-roja      { background:rgba(244,67,54,.05); border-color:rgba(244,67,54,.2); }
+    .tarj-icon     { font-size:1.3rem; margin-bottom:4px; }
+    .tarj-titulo   { font-family:'Barlow Condensed',sans-serif; font-size:.65rem; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; }
+    .tarj-cifras   { display:flex; justify-content:space-around; align-items:center; margin:8px 0; }
+    .tarj-cifra    { text-align:center; }
+    .tarj-cifra span{ font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--text-primary); display:block; line-height:1; }
+    .tarj-cifra small{ font-size:.65rem; color:var(--text-muted); font-family:'Barlow Condensed',sans-serif; letter-spacing:1px; }
+    .tarj-sep      { width:1px; background:var(--card-border); height:32px; }
+    .tarj-total    { font-family:'Barlow Condensed',sans-serif; font-size:.68rem; color:var(--text-muted); margin-top:4px; }
+    .barra-dual-wrap { display:flex; align-items:center; gap:6px; margin-bottom:4px; }
+    .barra-dual-label{ font-family:'Barlow Condensed',sans-serif; font-size:.72rem; color:var(--text-muted); white-space:nowrap; min-width:52px; }
+    .barra-dual-label:last-child { text-align:right; }
+    .barra-dual    { flex:1; height:6px; background:rgba(255,255,255,.06); border-radius:3px; overflow:hidden; display:flex; }
+    .barra-dual > div { transition:width .4s; }
 
-    /* ─── FOOTER ─── */
-    footer {
-      border-top: 1px solid var(--card-border);
-      padding: 1.5rem 0;
-      text-align: center;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: .8rem;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
+    /* ── FOOTER ── */
+    footer { border-top:1px solid var(--card-border); padding:1.5rem 0; text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:.8rem; letter-spacing:1px; color:var(--text-muted); }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="container">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
@@ -294,56 +200,38 @@
           <div class="club-sub">San Salvador de Jujuy</div>
         </div>
       </div>
-      <div class="season-tag">⚡ TEMPORADA 2026</div>
+      <div class="season-tag">⚡ <span id="torneo-nombre">TEMPORADA 2026</span></div>
     </div>
   </div>
 </header>
 
 <main class="container py-4">
 
-  <!-- RESUMEN GENERAL -->
+  <!-- RESUMEN -->
   <div class="card-dark mb-4">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
       <div class="section-title mb-0">RESUMEN DE LA TEMPORADA</div>
       <div id="forma-reciente" class="d-flex align-items-center gap-1"></div>
     </div>
     <div class="stat-grid">
-      <div class="stat-box">
-        <div class="value" id="stat-pj">—</div>
-        <div class="label">Jugados</div>
-      </div>
-      <div class="stat-box highlight">
-        <div class="value" id="stat-g">—</div>
-        <div class="label">Victorias</div>
-      </div>
-      <div class="stat-box">
-        <div class="value" id="stat-e">—</div>
-        <div class="label">Empates</div>
-      </div>
-      <div class="stat-box">
-        <div class="value" id="stat-p">—</div>
-        <div class="label">Derrotas</div>
-      </div>
-      <div class="stat-box">
-        <div class="value" id="stat-gf">—</div>
-        <div class="label">Goles a Favor</div>
-      </div>
-      <div class="stat-box">
-        <div class="value" id="stat-gc">—</div>
-        <div class="label">Goles en Contra</div>
-      </div>
-      <div class="stat-box highlight">
-        <div class="value" id="stat-dg">—</div>
-        <div class="label">Diferencia de Goles</div>
-      </div>
-      <div class="stat-box highlight-pts">
-        <div class="value" id="stat-pts">—</div>
-        <div class="label">Puntos</div>
-      </div>
+      <div class="stat-box"><div class="value" id="stat-pj">—</div><div class="label">Jugados</div></div>
+      <div class="stat-box highlight"><div class="value" id="stat-g">—</div><div class="label">Victorias</div></div>
+      <div class="stat-box"><div class="value" id="stat-e">—</div><div class="label">Empates</div></div>
+      <div class="stat-box"><div class="value" id="stat-p">—</div><div class="label">Derrotas</div></div>
+      <div class="stat-box"><div class="value" id="stat-gf">—</div><div class="label">Goles a Favor</div></div>
+      <div class="stat-box"><div class="value" id="stat-gc">—</div><div class="label">Goles en Contra</div></div>
+      <div class="stat-box highlight"><div class="value" id="stat-dg">—</div><div class="label">Diferencia de Goles</div></div>
+      <div class="stat-box highlight-pts"><div class="value" id="stat-pts">—</div><div class="label">Puntos</div></div>
     </div>
   </div>
 
-  <!-- GRÁFICOS LATERALES -->
+  <!-- TABLA DE POSICIONES -->
+  <div id="seccion-posiciones"></div>
+
+  <!-- RENDIMIENTO POR TIEMPO -->
+  <div id="seccion-tiempos"></div>
+
+  <!-- GRÁFICOS -->
   <div class="row g-3 mb-4">
     <div class="col-md-5">
       <div class="card-dark h-100">
@@ -360,7 +248,7 @@
     </div>
   </div>
 
-  <!-- PARTIDOS -->
+  <!-- HISTORIAL -->
   <div class="card-dark mb-4">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
       <div class="section-title mb-0">HISTORIAL DE PARTIDOS</div>
@@ -373,38 +261,26 @@
     </div>
     <div class="table-responsive-wrap">
       <table class="table-dark-custom">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Cond.</th>
-            <th>Rival</th>
-            <th class="text-center">Resultado</th>
-            <th class="text-center">DG</th>
-            <th class="text-center">—</th>
-            <th>Goles</th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th>Fecha</th><th>Cond.</th><th>Rival</th>
+          <th class="text-center">Resultado</th><th class="text-center">DG</th>
+          <th class="text-center">—</th><th>Goles</th>
+        </tr></thead>
         <tbody id="tabla-partidos"></tbody>
       </table>
     </div>
   </div>
 
-  <!-- ESTADÍSTICAS POR JUGADOR -->
+  <!-- PLANTEL -->
   <div class="card-dark mb-4">
     <div class="section-title">ESTADÍSTICAS DEL PLANTEL</div>
     <div class="table-responsive-wrap">
       <table class="table-dark-custom">
-        <thead>
-          <tr>
-            <th>Jugador</th>
-            <th class="text-center">#</th>
-            <th class="text-center">Posición</th>
-            <th class="text-center">Goles</th>
-            <th class="text-center">Amarillas</th>
-            <th class="text-center">Rojas</th>
-            <th class="text-center">Partidos</th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th>Jugador</th><th class="text-center">#</th><th class="text-center">Posición</th>
+          <th class="text-center">Goles</th><th class="text-center">Amarillas</th>
+          <th class="text-center">Rojas</th><th class="text-center">Partidos</th>
+        </tr></thead>
         <tbody id="tabla-jugadores"></tbody>
       </table>
     </div>
@@ -414,7 +290,7 @@
 
 <footer>
   <div class="container">
-    SAN JOSE FC &nbsp;·&nbsp; TEMPORADA 2026 &nbsp;·&nbsp; LIGA AMATEUR JUJUY
+    SAN JOSE FC &nbsp;·&nbsp; LIGA AMATEUR JUJUY
   </div>
 </footer>
 
