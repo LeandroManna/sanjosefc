@@ -524,5 +524,62 @@
       }
     ],
     "rojas": []
+  },
+  {
+    "id": 14,
+    "torneoId": 1,
+    "fecha": "2026-04-18",
+    "equipoId": 12,
+    "rival": "Curazao FC ST",
+    "golesLocal": 0,
+    "golesVisitante": 5,
+    "condicion": "visitante",
+    "jornada": 13,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      23
+    ],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 50
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 55
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 60
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 65
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 9,
+        "minuto": 55
+      }
+    ],
+    "rojas": []
   }
 ]

@@ -189,6 +189,15 @@
     "foto": null
   },
   {
+    "id": 23,
+    "nombre": "Franco",
+    "apellido": "Maita",
+    "apodo": "Elena",
+    "posicion": "Mediocampista",
+    "numero": 23,
+    "foto": null
+  },
+  {
     "id": 22,
     "nombre": "Jugador",
     "apellido": "Protesta",
