@@ -1,5 +1,18 @@
 [
   {
+    "equipoNombre": "Doberman ST",
+    "equipoId": null,
+    "pj": 15,
+    "pg": 11,
+    "pp": 1,
+    "pe": 3,
+    "gf": 49,
+    "gc": 14,
+    "dg": 35,
+    "puntos": 36,
+    "fechaActualizacion": "2026-04-23"
+  },
+  {
     "equipoNombre": "San Cayetano ST",
     "equipoId": null,
     "pj": 13,
@@ -10,20 +23,7 @@
     "gc": 19,
     "dg": 21,
     "puntos": 31,
-    "fechaActualizacion": "2026-04-18"
-  },
-  {
-    "equipoNombre": "Doberman ST",
-    "equipoId": null,
-    "pj": 13,
-    "pg": 9,
-    "pp": 1,
-    "pe": 3,
-    "gf": 43,
-    "gc": 14,
-    "dg": 29,
-    "puntos": 30,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "San jose FC ST",
@@ -36,7 +36,20 @@
     "gc": 14,
     "dg": 33,
     "puntos": 29,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
+  },
+  {
+    "equipoNombre": "Atletico Alberdi ST",
+    "equipoId": null,
+    "pj": 14,
+    "pg": 8,
+    "pp": 4,
+    "pe": 2,
+    "gf": 35,
+    "gc": 21,
+    "dg": 14,
+    "puntos": 26,
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Tigre de Alberdi ST",
@@ -49,46 +62,33 @@
     "gc": 15,
     "dg": 26,
     "puntos": 25,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Los Diegotes ST",
     "equipoId": null,
-    "pj": 13,
+    "pj": 14,
     "pg": 8,
-    "pp": 5,
+    "pp": 6,
     "pe": 0,
-    "gf": 32,
-    "gc": 17,
-    "dg": 15,
+    "gf": 35,
+    "gc": 21,
+    "dg": 14,
     "puntos": 24,
-    "fechaActualizacion": "2026-04-18"
-  },
-  {
-    "equipoNombre": "Atletico Alberdi ST",
-    "equipoId": null,
-    "pj": 13,
-    "pg": 7,
-    "pp": 4,
-    "pe": 2,
-    "gf": 33,
-    "gc": 20,
-    "dg": 13,
-    "puntos": 23,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Atl. San Pedrito FC ST",
     "equipoId": null,
-    "pj": 12,
-    "pg": 5,
+    "pj": 13,
+    "pg": 6,
     "pp": 3,
     "pe": 4,
-    "gf": 30,
-    "gc": 20,
-    "dg": 10,
-    "puntos": 19,
-    "fechaActualizacion": "2026-04-18"
+    "gf": 34,
+    "gc": 23,
+    "dg": 11,
+    "puntos": 22,
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "EPAM 3 ST",
@@ -101,20 +101,20 @@
     "gc": 22,
     "dg": 2,
     "puntos": 19,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "San Isidro ST",
     "equipoId": null,
-    "pj": 13,
-    "pg": 4,
+    "pj": 14,
+    "pg": 5,
     "pp": 6,
     "pe": 2,
-    "gf": 29,
+    "gf": 31,
     "gc": 26,
-    "dg": 3,
-    "puntos": 14,
-    "fechaActualizacion": "2026-04-18"
+    "dg": 5,
+    "puntos": 17,
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Cucharita ST",
@@ -127,45 +127,58 @@
     "gc": 32,
     "dg": 5,
     "puntos": 13,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Union Alto Bertres ST",
     "equipoId": null,
-    "pj": 12,
+    "pj": 13,
     "pg": 3,
-    "pp": 9,
+    "pp": 10,
     "pe": 0,
     "gf": 12,
-    "gc": 35,
-    "dg": -23,
+    "gc": 37,
+    "dg": -25,
     "puntos": 9,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Curazao FC ST",
     "equipoId": null,
-    "pj": 13,
+    "pj": 14,
     "pg": 2,
-    "pp": 11,
+    "pp": 12,
     "pe": 0,
     "gf": 18,
-    "gc": 46,
-    "dg": -28,
+    "gc": 51,
+    "dg": -36,
     "puntos": 6,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
+  },
+  {
+    "equipoNombre": "Dep. Alte. Brown ST",
+    "equipoId": null,
+    "pj": 3,
+    "pg": 1,
+    "pp": 2,
+    "pe": 0,
+    "gf": 1,
+    "gc": 2,
+    "dg": -1,
+    "puntos": 3,
+    "fechaActualizacion": "2026-04-23"
   },
   {
     "equipoNombre": "Los Rejuntados ST",
     "equipoId": null,
-    "pj": 12,
+    "pj": 13,
     "pg": 0,
-    "pp": 12,
+    "pp": 13,
     "pe": 0,
     "gf": 6,
-    "gc": 70,
-    "dg": -64,
+    "gc": 73,
+    "dg": -67,
     "puntos": 0,
-    "fechaActualizacion": "2026-04-18"
+    "fechaActualizacion": "2026-04-23"
   }
 ]
