@@ -581,5 +581,58 @@
       }
     ],
     "rojas": []
+  },
+  {
+    "id": 15,
+    "torneoId": 1,
+    "fecha": "2026-04-25",
+    "equipoId": 5,
+    "rival": "Doberman ST",
+    "golesLocal": 1,
+    "golesVisitante": 2,
+    "condicion": "local",
+    "jornada": 15,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 2,
+        "minuto": 25
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 21,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 15,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 19,
+        "minuto": 55
+      }
+    ],
+    "rojas": [
+      {
+        "jugadorId": 7,
+        "minuto": 0
+      }
+    ]
   }
 ]

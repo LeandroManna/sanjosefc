@@ -2,15 +2,15 @@
   {
     "equipoNombre": "Doberman ST",
     "equipoId": null,
-    "pj": 15,
-    "pg": 11,
+    "pj": 16,
+    "pg": 12,
     "pp": 1,
     "pe": 3,
-    "gf": 49,
-    "gc": 14,
-    "dg": 35,
-    "puntos": 36,
-    "fechaActualizacion": "2026-04-23"
+    "gf": 51,
+    "gc": 15,
+    "dg": 36,
+    "puntos": 39,
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "San Cayetano ST",
@@ -23,20 +23,20 @@
     "gc": 19,
     "dg": 21,
     "puntos": 31,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "San jose FC ST",
     "equipoId": null,
-    "pj": 13,
+    "pj": 14,
     "pg": 9,
-    "pp": 2,
+    "pp": 3,
     "pe": 2,
-    "gf": 47,
-    "gc": 14,
-    "dg": 33,
+    "gf": 48,
+    "gc": 16,
+    "dg": 32,
     "puntos": 29,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Atletico Alberdi ST",
@@ -49,7 +49,7 @@
     "gc": 21,
     "dg": 14,
     "puntos": 26,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Tigre de Alberdi ST",
@@ -62,7 +62,7 @@
     "gc": 15,
     "dg": 26,
     "puntos": 25,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Los Diegotes ST",
@@ -75,7 +75,7 @@
     "gc": 21,
     "dg": 14,
     "puntos": 24,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Atl. San Pedrito FC ST",
@@ -88,7 +88,7 @@
     "gc": 23,
     "dg": 11,
     "puntos": 22,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "EPAM 3 ST",
@@ -101,7 +101,7 @@
     "gc": 22,
     "dg": 2,
     "puntos": 19,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "San Isidro ST",
@@ -114,7 +114,7 @@
     "gc": 26,
     "dg": 5,
     "puntos": 17,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Cucharita ST",
@@ -127,7 +127,7 @@
     "gc": 32,
     "dg": 5,
     "puntos": 13,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Union Alto Bertres ST",
@@ -140,7 +140,7 @@
     "gc": 37,
     "dg": -25,
     "puntos": 9,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Curazao FC ST",
@@ -153,7 +153,7 @@
     "gc": 51,
     "dg": -36,
     "puntos": 6,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Dep. Alte. Brown ST",
@@ -166,7 +166,7 @@
     "gc": 2,
     "dg": -1,
     "puntos": 3,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   },
   {
     "equipoNombre": "Los Rejuntados ST",
@@ -179,6 +179,6 @@
     "gc": 73,
     "dg": -67,
     "puntos": 0,
-    "fechaActualizacion": "2026-04-23"
+    "fechaActualizacion": "2026-04-26"
   }
 ]
