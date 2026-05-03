@@ -634,5 +634,33 @@
         "minuto": 0
       }
     ]
+  },
+  {
+    "id": 16,
+    "torneoId": 1,
+    "fecha": "2026-05-02",
+    "equipoId": 10,
+    "rival": "Union Alto Bertres ST",
+    "golesLocal": 0,
+    "golesVisitante": 0,
+    "condicion": "visitante",
+    "jornada": 16,
+    "jugadores": [
+      1,
+      3,
+      5,
+      8,
+      11,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
   }
 ]
