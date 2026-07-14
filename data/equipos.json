@@ -8,6 +8,10 @@
     "nombre": "Atletico Alberdi ST"
   },
   {
+    "id": 16,
+    "nombre": "Club Deportivo Leon ST"
+  },
+  {
     "id": 11,
     "nombre": "Cucharita ST"
   },
@@ -26,6 +30,10 @@
   {
     "id": 9,
     "nombre": "EPAM 3 ST"
+  },
+  {
+    "id": 15,
+    "nombre": "La Banda del Pibe ST"
   },
   {
     "id": 1,

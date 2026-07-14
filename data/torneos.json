@@ -4,8 +4,17 @@
     "nombre": "Apertura 2026",
     "anio": 2026,
     "fase": "apertura",
-    "activo": 1,
+    "activo": 0,
     "fecha_inicio": "2026-02-01",
+    "fecha_fin": "2026-06-27"
+  },
+  {
+    "id": 2,
+    "nombre": "Clausura 2026",
+    "anio": 2026,
+    "fase": "clausura",
+    "activo": 1,
+    "fecha_inicio": "2026-07-11",
     "fecha_fin": null
   }
 ]

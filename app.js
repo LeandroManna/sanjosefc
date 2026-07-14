@@ -7,6 +7,8 @@ let partidos   = [];
 let posiciones = [];
 let torneos    = [];
 let torneoActivo = null;
+let partidosTorneo = [];
+let posicionesTorneo = [];
 
 // ── CARGA DE DATOS ────────────────────────────────────────────────────────────
 async function loadData() {
@@ -23,6 +25,7 @@ async function loadData() {
     torneos    = await torRes.json();
     torneoActivo = torneos.find(t => t.activo) || torneos[0] || null;
     partidos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+    aplicarTorneoActivo();
     renderAll();
   } catch (e) {
     console.error('Error cargando datos:', e);
@@ -43,22 +46,40 @@ function getNombre(id) {
 
 function esPrimerTiempo(min) { return min <= T1_MAX; }
 
+function aplicarTorneoActivo() {
+  const tid = torneoActivo?.id;
+  partidosTorneo = partidos
+    .filter(p => !tid || !p.torneoId || p.torneoId === tid)
+    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+  const tieneTorneoId = posiciones.some(p => p.torneoId);
+  posicionesTorneo = tieneTorneoId && tid
+    ? posiciones.filter(p => p.torneoId === tid)
+    : posiciones;
+}
+
+function seleccionarTorneo(id) {
+  torneoActivo = torneos.find(t => t.id === Number(id)) || torneoActivo;
+  aplicarTorneoActivo();
+  renderAll();
+}
+
 // ── CÁLCULOS ──────────────────────────────────────────────────────────────────
 function calcularResumen() {
   let g = 0, e = 0, p = 0, gf = 0, gc = 0;
-  partidos.forEach(pt => {
+  partidosTorneo.forEach(pt => {
     const prop = pt.condicion === 'local' ? pt.golesLocal  : pt.golesVisitante;
     const riv  = pt.condicion === 'local' ? pt.golesVisitante : pt.golesLocal;
     gf += prop; gc += riv;
     if (prop > riv) g++; else if (prop < riv) p++; else e++;
   });
-  return { pj: partidos.length, g, e, p, gf, gc, dg: gf - gc, pts: g * 3 + e };
+  return { pj: partidosTorneo.length, g, e, p, gf, gc, dg: gf - gc, pts: g * 3 + e };
 }
 
 function calcularStatsJugadores() {
   const stats = {};
   jugadores.forEach(j => { stats[j.id] = { goles:0, amarillas:0, rojas:0, partidos:0 }; });
-  partidos.forEach(pt => {
+  partidosTorneo.forEach(pt => {
     (pt.jugadores || []).forEach(id => { if (stats[id]) stats[id].partidos++; });
     (pt.goles     || []).forEach(g  => { if (stats[g.jugadorId]) stats[g.jugadorId].goles++;     });
     (pt.amarillas || []).forEach(a  => { if (stats[a.jugadorId]) stats[a.jugadorId].amarillas++; });
@@ -69,11 +90,11 @@ function calcularStatsJugadores() {
 
 function calcularGolesPorTiempo() {
   let t1 = 0, t2 = 0;
-  partidos.forEach(pt => (pt.goles || []).forEach(g => {
+  partidosTorneo.forEach(pt => (pt.goles || []).forEach(g => {
     esPrimerTiempo(g.minuto) ? t1++ : t2++;
   }));
   const tot = t1 + t2 || 1;
-  const ppj = partidos.length || 1;
+  const ppj = partidosTorneo.length || 1;
   return { t1, t2, total: t1 + t2,
     pct1: Math.round(t1/tot*100), pct2: Math.round(t2/tot*100),
     prom1: (t1/ppj).toFixed(2),   prom2: (t2/ppj).toFixed(2) };
@@ -81,11 +102,11 @@ function calcularGolesPorTiempo() {
 
 function calcularTarjetasPorTiempo() {
   let a1=0,a2=0,r1=0,r2=0;
-  partidos.forEach(pt => {
+  partidosTorneo.forEach(pt => {
     (pt.amarillas||[]).forEach(t => esPrimerTiempo(t.minuto) ? a1++ : a2++);
     (pt.rojas    ||[]).forEach(t => esPrimerTiempo(t.minuto) ? r1++ : r2++);
   });
-  const ppj = partidos.length || 1;
+  const ppj = partidosTorneo.length || 1;
   return { a1, a2, r1, r2,
     totalA: a1+a2, totalR: r1+r2,
     promA: ((a1+a2)/ppj).toFixed(2), promR: ((r1+r2)/ppj).toFixed(2) };
@@ -95,6 +116,17 @@ function calcularTarjetasPorTiempo() {
 function renderHeader() {
   const el = document.getElementById('torneo-nombre');
   if (el && torneoActivo) el.textContent = torneoActivo.nombre;
+}
+
+function renderTorneosNav() {
+  const el = document.getElementById('torneo-tabs');
+  if (!el) return;
+
+  el.innerHTML = torneos.map(t => `
+    <button class="torneo-tab ${torneoActivo?.id === t.id ? 'active' : ''}" onclick="seleccionarTorneo(${t.id})">
+      ${t.nombre}
+    </button>
+  `).join('');
 }
 
 // ── RENDER RESUMEN ────────────────────────────────────────────────────────────
@@ -110,7 +142,7 @@ function renderResumen() {
   document.getElementById('stat-pts').textContent = r.pts;
 
   // Forma reciente (últimos 5)
-  document.getElementById('forma-reciente').innerHTML = partidos.slice(0, 5).map(p => {
+  document.getElementById('forma-reciente').innerHTML = partidosTorneo.slice(0, 5).map(p => {
     const res = getResultado(p);
     const cls = res === 'W' ? 'forma-w' : res === 'L' ? 'forma-l' : 'forma-d';
     return `<span class="forma-badge ${cls}">${res}</span>`;
@@ -122,7 +154,7 @@ function renderPosiciones() {
   const el = document.getElementById('seccion-posiciones');
   if (!el) return;
 
-  if (!posiciones.length) {
+  if (!posicionesTorneo.length) {
     el.innerHTML = `<div class="card-dark mb-4">
       <div class="section-title mb-2">🏆 TABLA DE POSICIONES</div>
       <p class="text-muted text-center py-3" style="font-family:'Barlow Condensed',sans-serif;letter-spacing:1px">
@@ -132,14 +164,14 @@ function renderPosiciones() {
   }
 
   // Ya viene ordenada del JSON (exportada por puntos DESC, dg DESC)
-  const fechaInfo = posiciones[0]?.fechaActualizacion
+  const fechaInfo = posicionesTorneo[0]?.fechaActualizacion
     ? `<span class="pos-fecha">Actualizado: ${
-        new Date(posiciones[0].fechaActualizacion + 'T00:00:00')
+        new Date(posicionesTorneo[0].fechaActualizacion + 'T00:00:00')
           .toLocaleDateString('es-AR', {day:'2-digit',month:'long',year:'numeric'})
       }</span>`
     : '';
 
-  const filas = posiciones.map((eq, i) => {
+  const filas = posicionesTorneo.map((eq, i) => {
     const pos   = i + 1;
     const esSJ  = eq.equipoNombre.toLowerCase().includes('san jose') ||
                   eq.equipoNombre.toLowerCase().includes('san josé');
@@ -280,7 +312,7 @@ function renderTiempos() {
 // ── RENDER PARTIDOS ───────────────────────────────────────────────────────────
 function renderPartidos() {
   const tbody = document.getElementById('tabla-partidos');
-  tbody.innerHTML = partidos.map(p => {
+  tbody.innerHTML = partidosTorneo.map(p => {
     const res      = getResultado(p);
     const resCls   = res === 'W' ? 'text-success' : res === 'L' ? 'text-danger' : 'text-warning';
     const resLabel = res === 'W' ? 'VICTORIA' : res === 'L' ? 'DERROTA' : 'EMPATE';
@@ -357,8 +389,8 @@ function renderEstadisticas() {
 // ── RENDER DONUT ──────────────────────────────────────────────────────────────
 function renderDonut() {
   const conteo = {W:0,D:0,L:0};
-  partidos.forEach(p => conteo[getResultado(p)]++);
-  const total = partidos.length || 1;
+  partidosTorneo.forEach(p => conteo[getResultado(p)]++);
+  const total = partidosTorneo.length || 1;
   const pW = Math.round(conteo.W/total*100);
   const pD = Math.round(conteo.D/total*100);
   const pL = Math.round(conteo.L/total*100);
@@ -379,7 +411,7 @@ function renderDonut() {
     <path d="${arc(pD,pW)}"      fill="#ffc107" opacity=".9"/>
     <path d="${arc(pL,pW+pD)}"   fill="#f44336" opacity=".9"/>
     <circle cx="${cx}" cy="${cy}" r="35" fill="var(--card-bg)"/>
-    <text x="${cx}" y="${cy-6}"  text-anchor="middle" fill="var(--text-primary)" font-size="18" font-weight="bold">${partidos.length}</text>
+    <text x="${cx}" y="${cy-6}"  text-anchor="middle" fill="var(--text-primary)" font-size="18" font-weight="bold">${partidosTorneo.length}</text>
     <text x="${cx}" y="${cy+12}" text-anchor="middle" fill="var(--text-muted)"   font-size="9">PARTIDOS</text>`;
 
   document.getElementById('leyenda-resultados').innerHTML = `
@@ -400,6 +432,7 @@ function filterPartidos(filtro) {
 // ── RENDER ALL ────────────────────────────────────────────────────────────────
 function renderAll() {
   renderHeader();
+  renderTorneosNav();
   renderResumen();
   renderPosiciones();
   renderTiempos();
@@ -409,4 +442,5 @@ function renderAll() {
 }
 
 window.filterPartidos = filterPartidos;
+window.seleccionarTorneo = seleccionarTorneo;
 document.addEventListener('DOMContentLoaded', loadData);

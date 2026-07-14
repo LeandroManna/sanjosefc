@@ -51,6 +51,15 @@
     .season-tag { font-family:'Barlow Condensed',sans-serif; font-size:.8rem; letter-spacing:2px;
                   background:rgba(26,138,62,.2); border:1px solid var(--verde); color:var(--verde-glow);
                   padding:.3rem .8rem; border-radius:20px; }
+    .torneo-tabs {
+      display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem;
+    }
+    .torneo-tab {
+      background:rgba(26,138,62,.08); border:1px solid var(--card-border); color:var(--text-muted);
+      font-family:'Barlow Condensed',sans-serif; font-size:.82rem; letter-spacing:1.5px;
+      padding:.45rem .9rem; border-radius:7px; cursor:pointer; transition:all .2s;
+    }
+    .torneo-tab:hover,.torneo-tab.active { background:var(--verde); border-color:var(--verde); color:#fff; }
 
     /* ── CARDS ── */
     .card-dark {
@@ -206,6 +215,8 @@
 </header>
 
 <main class="container py-4">
+
+  <div id="torneo-tabs" class="torneo-tabs"></div>
 
   <!-- RESUMEN -->
   <div class="card-dark mb-4">

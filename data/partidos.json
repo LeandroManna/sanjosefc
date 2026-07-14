@@ -662,5 +662,556 @@
     "goles": [],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "id": 17,
+    "torneoId": 1,
+    "fecha": "2026-05-09",
+    "equipoId": 15,
+    "rival": "La Banda del Pibe ST",
+    "golesLocal": 4,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 17,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 12
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 24
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 41
+      },
+      {
+        "jugadorId": 3,
+        "minuto": 58
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 15,
+        "minuto": 44
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 18,
+    "torneoId": 1,
+    "fecha": "2026-05-16",
+    "equipoId": 16,
+    "rival": "Club Deportivo Leon ST",
+    "golesLocal": 1,
+    "golesVisitante": 3,
+    "condicion": "visitante",
+    "jornada": 18,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 18
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 37
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 66
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 20,
+        "minuto": 52
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 19,
+    "torneoId": 1,
+    "fecha": "2026-05-23",
+    "equipoId": 2,
+    "rival": "San Cayetano ST",
+    "golesLocal": 1,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "jornada": 19,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 62
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 13,
+        "minuto": 29
+      },
+      {
+        "jugadorId": 5,
+        "minuto": 61
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 20,
+    "torneoId": 1,
+    "fecha": "2026-05-30",
+    "equipoId": 4,
+    "rival": "Tigre de Alberdi ST",
+    "golesLocal": 1,
+    "golesVisitante": 2,
+    "condicion": "visitante",
+    "jornada": 20,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 33
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 55
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 19,
+        "minuto": 47
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 21,
+    "torneoId": 1,
+    "fecha": "2026-06-06",
+    "equipoId": 7,
+    "rival": "San Isidro ST",
+    "golesLocal": 2,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "jornada": 21,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 21
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 64
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 21,
+        "minuto": 35
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 22,
+    "torneoId": 1,
+    "fecha": "2026-06-10",
+    "equipoId": 9,
+    "rival": "EPAM 3 ST",
+    "golesLocal": 1,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "jornada": 22,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 49
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 11,
+        "minuto": 57
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 23,
+    "torneoId": 1,
+    "fecha": "2026-06-13",
+    "equipoId": 8,
+    "rival": "San Pedrito FC ST",
+    "golesLocal": 1,
+    "golesVisitante": 3,
+    "condicion": "visitante",
+    "jornada": 23,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 16
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 39
+      },
+      {
+        "jugadorId": 2,
+        "minuto": 69
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 14,
+        "minuto": 31
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 24,
+    "torneoId": 1,
+    "fecha": "2026-06-17",
+    "equipoId": 15,
+    "rival": "La Banda del Pibe ST",
+    "golesLocal": 2,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 24,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 28
+      },
+      {
+        "jugadorId": 3,
+        "minuto": 53
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 9,
+        "minuto": 60
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 25,
+    "torneoId": 1,
+    "fecha": "2026-06-20",
+    "equipoId": 14,
+    "rival": "Dep. Alte. Brown ST",
+    "golesLocal": 1,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "jornada": 25,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 45
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 12,
+        "minuto": 26
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 26,
+    "torneoId": 1,
+    "fecha": "2026-06-24",
+    "equipoId": 16,
+    "rival": "Club Deportivo Leon ST",
+    "golesLocal": 1,
+    "golesVisitante": 2,
+    "condicion": "visitante",
+    "jornada": 26,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 11
+      },
+      {
+        "jugadorId": 5,
+        "minuto": 67
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 20,
+        "minuto": 48
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 27,
+    "torneoId": 1,
+    "fecha": "2026-06-27",
+    "equipoId": 2,
+    "rival": "San Cayetano ST",
+    "golesLocal": 1,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 27,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 70
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 15,
+        "minuto": 32
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 63
+      }
+    ],
+    "rojas": []
+  },
+  {
+    "id": 28,
+    "torneoId": 2,
+    "fecha": "2026-07-11",
+    "equipoId": 11,
+    "rival": "Cucharita ST",
+    "golesLocal": 1,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 1,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 8,
+        "minuto": 20
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
   }
 ]
