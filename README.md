@@ -1,79 +1,199 @@
-# ⚽ San Jose FC — Dashboard
+# San Jose FC Dashboard
 
-Panel de estadísticas del equipo **San Jose FC**, San Salvador de Jujuy.
+Dashboard publico de estadisticas para **San Jose FC**, equipo de futbol amateur de San Salvador de Jujuy.
 
-Desarrollado para publicarse en **GitHub Pages** (solo HTML, CSS, JS, Bootstrap y JSON).
+El proyecto esta pensado para publicarse en **GitHub Pages** y funcionar sin backend: la interfaz carga archivos JSON locales con torneos, partidos, posiciones, plantel y estadisticas.
 
-## 📁 Estructura del proyecto
+## Objetivo
 
-```
+Centralizar la informacion deportiva del equipo en una pagina simple, clara y compartible con el plantel:
+
+- resultados por torneo;
+- tabla de posiciones;
+- resumen de rendimiento;
+- historial de partidos;
+- ranking de goleadores;
+- estadisticas individuales del plantel;
+- comparacion entre torneo actual e historicos.
+
+## Estado Actual
+
+El dashboard soporta multiples torneos. Actualmente conserva el historico del **Apertura 2026** y muestra por defecto el **Clausura 2026** como torneo activo.
+
+Los datos se actualizan manualmente a partir de los flyers oficiales de la liga y de la informacion interna del equipo, especialmente los autores de los goles de San Jose FC.
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript vanilla
+- Bootstrap 5
+- JSON como fuente de datos
+- GitHub Pages para publicacion
+
+No requiere build, servidor ni base de datos para la version publica.
+
+## Estructura
+
+```text
 sanjosefc/
-├── index.html          ← Dashboard principal
-├── app.js              ← Lógica de carga y renderizado
-└── data/
-    ├── jugadores.json  ← Plantel: nombre, apellido, apodo, posición, número
-    └── partidos.json   ← Resultados, goles, amarillas, rojas por partido
+|-- index.html              # Dashboard publico
+|-- app.js                  # Carga de datos, calculos y renderizado
+|-- assets/                 # Favicons, iconos y recursos visuales
+|-- data/
+|   |-- equipos.json        # Equipos registrados
+|   |-- jugadores.json      # Plantel
+|   |-- partidos.json       # Partidos, goles, tarjetas y convocados
+|   |-- posiciones.json     # Tablas de posiciones por torneo
+|   `-- torneos.json        # Torneos disponibles y torneo activo
+|-- admin.py                # Panel local Flask + MySQL
+|-- database.sql            # Esquema MySQL para administracion local
+|-- bot.py                  # Bot de Telegram experimental
+|-- templates/
+|   `-- admin.html          # Vista del panel de administracion
+`-- requirements.txt        # Dependencias Python del panel local
 ```
 
-## 🚀 Publicar en GitHub Pages
+## Datos
 
-1. Crear un repositorio en GitHub (ej: `sanjosefc`)
-2. Subir todos los archivos manteniendo la estructura de carpetas
-3. Ir a **Settings → Pages → Source: Deploy from branch → main / root**
-4. En segundos la página estará en: `https://tuusuario.github.io/sanjosefc`
+### Torneos
 
-## ✏️ Cómo cargar datos
+Archivo: `data/torneos.json`
 
-### Agregar un partido (`data/partidos.json`)
+Cada torneo define su nombre, fase, fechas y si esta activo:
 
 ```json
 {
-  "id": 7,
-  "fecha": "2025-04-13",
-  "rival": "Nombre del rival",
-  "golesLocal": 2,
-  "golesVisitante": 1,
+  "id": 2,
+  "nombre": "Clausura 2026",
+  "anio": 2026,
+  "fase": "clausura",
+  "activo": 1,
+  "fecha_inicio": "2026-07-11",
+  "fecha_fin": null
+}
+```
+
+El dashboard toma como predeterminado el torneo con `activo: 1`, pero permite cambiar entre torneos desde la interfaz.
+
+### Partidos
+
+Archivo: `data/partidos.json`
+
+Cada partido debe indicar a que torneo pertenece mediante `torneoId`.
+
+```json
+{
+  "id": 28,
+  "torneoId": 2,
+  "fecha": "2026-07-11",
+  "equipoId": 11,
+  "rival": "Cucharita ST",
+  "golesLocal": 1,
+  "golesVisitante": 0,
   "condicion": "local",
-  "torneo": "Liga Amateur Jujuy",
-  "jornada": 7,
+  "jornada": 1,
+  "jugadores": [1, 2, 3, 4, 5, 8],
   "goles": [
-    { "jugadorId": 6, "minuto": 15 },
-    { "jugadorId": 10, "minuto": 70 }
+    { "jugadorId": 8, "minuto": 20 }
   ],
-  "amarillas": [
-    { "jugadorId": 4, "minuto": 55 }
-  ],
+  "amarillas": [],
   "rojas": []
 }
 ```
 
-> `condicion` puede ser `"local"` o `"visitante"`  
-> Los `jugadorId` corresponden al campo `id` de `jugadores.json`
+Reglas importantes:
 
-### Agregar un jugador (`data/jugadores.json`)
+- `condicion` puede ser `local` o `visitante`.
+- `golesLocal` y `golesVisitante` siempre representan el marcador oficial local/visitante.
+- Los goles de San Jose se cargan en `goles` con el `jugadorId` correspondiente.
+- Los `jugadorId` salen de `data/jugadores.json`.
+- No se deben inventar resultados: solo se cargan partidos observados en flyers oficiales o datos confirmados.
+
+### Posiciones
+
+Archivo: `data/posiciones.json`
+
+Las posiciones tambien usan `torneoId`, lo que permite guardar tablas historicas y actuales en el mismo archivo.
 
 ```json
 {
-  "id": 11,
-  "nombre": "Juan",
-  "apellido": "Pérez",
-  "apodo": "Juancho",
-  "posicion": "Delantero",
-  "numero": 18,
-  "foto": null
+  "torneoId": 2,
+  "equipoNombre": "San Jose ST",
+  "equipoId": 6,
+  "pj": 1,
+  "pg": 1,
+  "pp": 0,
+  "pe": 0,
+  "gf": 1,
+  "gc": 0,
+  "dg": 1,
+  "puntos": 3,
+  "fechaActualizacion": "2026-07-11"
 }
 ```
 
-## 📊 Funcionalidades
+La tabla del dashboard debe coincidir con el flyer oficial de la liga cuando exista una tabla publicada.
 
-- Resumen de temporada: PJ, V, E, D, GF, GC, DG, Puntos
-- Forma reciente (últimos 5 partidos)
-- Historial de partidos con filtro por resultado
-- Goles por jugador y minuto en cada partido
-- Gráfico de distribución de resultados (donut SVG)
-- Ranking de goleadores con barras de progreso
-- Tabla completa del plantel: goles, amarillas, rojas, partidos jugados
+### Equipos
 
-## 🤖 Próximamente
+Archivo: `data/equipos.json`
 
-- Bot de Telegram para cargar resultados y eventos de partido desde el celular ni bien termina el partido.
+Solo se agregan equipos confirmados. En flyers de la liga, los equipos de la categoria estandar se identifican porque terminan en `ST`.
+
+Si aparece un equipo nuevo terminado en `ST`, se agrega al listado, pero no se completan partidos que no figuren en los resultados oficiales.
+
+## Publicacion en GitHub Pages
+
+1. Subir los cambios al repositorio.
+2. En GitHub, ir a **Settings > Pages**.
+3. Seleccionar **Deploy from a branch**.
+4. Elegir la rama principal y la carpeta raiz.
+5. GitHub Pages publicara el sitio como pagina estatica.
+
+Como no hay proceso de build, cualquier cambio en `index.html`, `app.js`, `assets/` o `data/` queda disponible despues del deploy de GitHub Pages.
+
+## Administracion Local
+
+La version publica funciona solo con archivos JSON. Ademas, el repositorio incluye herramientas locales opcionales:
+
+- `admin.py`: panel Flask conectado a MySQL para cargar datos y exportar JSON.
+- `database.sql`: estructura de base de datos para el panel.
+- `bot.py`: bot experimental de Telegram para cargar informacion desde el celular.
+
+Para instalar dependencias del panel local:
+
+```bash
+pip install -r requirements.txt
+```
+
+Para ejecutar el panel:
+
+```bash
+python admin.py
+```
+
+Luego abrir:
+
+```text
+http://localhost:5000/admin
+```
+
+## Flujo Recomendado de Actualizacion
+
+1. Revisar el flyer oficial de resultados.
+2. Cargar solo partidos de la categoria estandar (`ST`).
+3. Agregar equipos nuevos terminados en `ST` si aparecen.
+4. Cargar el partido de San Jose con resultado, rival, condicion y jornada.
+5. Cargar goleadores confirmados por el equipo.
+6. Actualizar la tabla de posiciones solo con datos oficiales.
+7. Validar que el dashboard muestre correctamente el torneo activo.
+
+## Criterios del Proyecto
+
+- El dashboard debe ser facil de consultar desde el celular.
+- El torneo actual debe verse primero.
+- Los torneos anteriores deben quedar disponibles como historial.
+- Los datos visibles deben priorizar exactitud sobre completitud.
+- No se generan resultados al azar.
+- Las estadisticas de goleadores se actualizan solo con informacion confirmada.
