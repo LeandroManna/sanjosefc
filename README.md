@@ -46,12 +46,7 @@ sanjosefc/
 |   |-- partidos.json       # Partidos, goles, tarjetas y convocados
 |   |-- posiciones.json     # Tablas de posiciones por torneo
 |   `-- torneos.json        # Torneos disponibles y torneo activo
-|-- admin.py                # Panel local Flask + MySQL
-|-- database.sql            # Esquema MySQL para administracion local
-|-- bot.py                  # Bot de Telegram experimental
-|-- templates/
-|   `-- admin.html          # Vista del panel de administracion
-`-- requirements.txt        # Dependencias Python del panel local
+`-- README.md               # Documentacion del proyecto
 ```
 
 ## Datos
@@ -152,32 +147,6 @@ Si aparece un equipo nuevo terminado en `ST`, se agrega al listado, pero no se c
 5. GitHub Pages publicara el sitio como pagina estatica.
 
 Como no hay proceso de build, cualquier cambio en `index.html`, `app.js`, `assets/` o `data/` queda disponible despues del deploy de GitHub Pages.
-
-## Administracion Local
-
-La version publica funciona solo con archivos JSON. Ademas, el repositorio incluye herramientas locales opcionales:
-
-- `admin.py`: panel Flask conectado a MySQL para cargar datos y exportar JSON.
-- `database.sql`: estructura de base de datos para el panel.
-- `bot.py`: bot experimental de Telegram para cargar informacion desde el celular.
-
-Para instalar dependencias del panel local:
-
-```bash
-pip install -r requirements.txt
-```
-
-Para ejecutar el panel:
-
-```bash
-python admin.py
-```
-
-Luego abrir:
-
-```text
-http://localhost:5000/admin
-```
 
 ## Flujo Recomendado de Actualizacion
 
