@@ -4,6 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>San Jose FC — Dashboard</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+  <link rel="manifest" href="assets/site.webmanifest"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
@@ -42,9 +47,13 @@
       box-shadow: 0 4px 30px rgba(26,138,62,.25);
     }
     .escudo-wrap {
-      width:54px; height:54px; background:var(--verde); border-radius:50%;
-      display:flex; align-items:center; justify-content:center; font-size:1.8rem;
-      box-shadow: 0 0 20px rgba(26,138,62,.6); flex-shrink:0;
+      width:64px; height:64px; border-radius:14px; overflow:hidden;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 0 20px rgba(240,192,64,.35); flex-shrink:0;
+      background:#050805; border:1px solid rgba(240,192,64,.45);
+    }
+    .escudo-wrap img {
+      width:100%; height:100%; object-fit:cover; display:block;
     }
     .club-name  { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:3px; color:#fff; line-height:1; }
     .club-sub   { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; letter-spacing:4px; color:var(--verde-glow); text-transform:uppercase; }
@@ -203,7 +212,7 @@
   <div class="container">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
       <div class="d-flex align-items-center gap-3">
-        <div class="escudo-wrap">⚽</div>
+        <div class="escudo-wrap"><img src="assets/android-chrome-512x512.png" alt="Escudo San Jose FC"/></div>
         <div>
           <div class="club-name">San Jose FC</div>
           <div class="club-sub">San Salvador de Jujuy</div>
