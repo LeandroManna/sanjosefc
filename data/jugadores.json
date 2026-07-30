@@ -196,14 +196,5 @@
     "posicion": "Mediocampista",
     "numero": 23,
     "foto": null
-  },
-  {
-    "id": 22,
-    "nombre": "Jugador",
-    "apellido": "Protesta",
-    "apodo": "Protesta",
-    "posicion": "Arquero",
-    "numero": 100,
-    "foto": null
   }
 ]

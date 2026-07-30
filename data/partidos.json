@@ -304,20 +304,7 @@
       20,
       21
     ],
-    "goles": [
-      {
-        "jugadorId": 22,
-        "minuto": 25
-      },
-      {
-        "jugadorId": 22,
-        "minuto": 30
-      },
-      {
-        "jugadorId": 22,
-        "minuto": 35
-      }
-    ],
+    "goles": [],
     "amarillas": [
       {
         "jugadorId": 20,
@@ -1213,5 +1200,21 @@
     ],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "id": 29,
+    "torneoId": 2,
+    "fecha": "2026-07-25",
+    "equipoId": 2,
+    "rival": "San Cayetano ST",
+    "golesLocal": 0,
+    "golesVisitante": 3,
+    "condicion": "visitante",
+    "jornada": 2,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": [],
+    "nota": "Ganado por no presentacion del rival. No se asignan goles individuales."
   }
 ]
