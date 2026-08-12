@@ -1216,5 +1216,95 @@
     "amarillas": [],
     "rojas": [],
     "nota": "Ganado por no presentacion del rival. No se asignan goles individuales."
+  },
+  {
+    "id": 30,
+    "torneoId": 2,
+    "fecha": "2026-08-01",
+    "equipoId": 8,
+    "rival": "San Pedrito FC ST",
+    "golesLocal": 2,
+    "golesVisitante": 2,
+    "condicion": "local",
+    "jornada": 3,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 5,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 55
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
+  },
+  {
+    "id": 31,
+    "torneoId": 2,
+    "fecha": "2026-08-08",
+    "equipoId": 10,
+    "rival": "Union Alto Bertres ST",
+    "golesLocal": 4,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 4,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 5,
+        "minuto": 12
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 22
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 31
+      },
+      {
+        "jugadorId": 8,
+        "minuto": 50
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
   }
 ]
