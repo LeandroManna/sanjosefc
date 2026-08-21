@@ -1306,5 +1306,42 @@
     ],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "id": 32,
+    "torneoId": 2,
+    "fecha": "2026-08-15",
+    "equipoId": 15,
+    "rival": "La Banda del Pibe ST",
+    "golesLocal": 0,
+    "golesVisitante": 1,
+    "condicion": "visitante",
+    "jornada": 5,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21
+    ],
+    "goles": [
+      {
+        "jugadorId": 13,
+        "minuto": 65
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
   }
 ]

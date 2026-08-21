@@ -32,16 +32,20 @@
     "nombre": "EPAM 3 ST"
   },
   {
-    "id": 17,
-    "nombre": "La Banda ST"
-  },
-  {
     "id": 15,
     "nombre": "La Banda del Pibe ST"
   },
   {
+    "id": 17,
+    "nombre": "La Banda ST"
+  },
+  {
     "id": 1,
     "nombre": "Los Diegotes ST"
+  },
+  {
+    "id": 18,
+    "nombre": "Los Lobos FC ST"
   },
   {
     "id": 13,
