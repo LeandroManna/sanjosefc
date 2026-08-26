@@ -124,6 +124,9 @@
     .stat-cell     { color:var(--text-muted); }
     .pts-cell      { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--accent); }
     .pos-fecha     { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; letter-spacing:1px; color:var(--text-muted); }
+    .equipo-clickable { cursor:pointer; }
+    .equipo-clickable:focus-visible { outline:2px solid var(--verde-glow); outline-offset:-2px; }
+    .equipo-hint { color:var(--text-muted); font-family:'Barlow Condensed',sans-serif; font-size:.7rem; letter-spacing:1px; }
 
     /* ── DG BADGE ── */
     .dg-badge { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.85rem; padding:.15rem .45rem; border-radius:4px; }
@@ -201,6 +204,29 @@
     .barra-dual-label:last-child { text-align:right; }
     .barra-dual    { flex:1; height:6px; background:rgba(255,255,255,.06); border-radius:3px; overflow:hidden; display:flex; }
     .barra-dual > div { transition:width .4s; }
+
+    /* -- MODAL HISTORIAL EQUIPO -- */
+    .modal-content.historial-modal {
+      background:var(--card-bg); border:1px solid var(--card-border); color:var(--text-primary);
+      border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.45);
+    }
+    .modal-header,.modal-footer { border-color:var(--card-border); }
+    .btn-close.btn-close-custom { filter:invert(1) grayscale(100%); opacity:.75; }
+    .equipo-partido-item {
+      display:grid; grid-template-columns:110px 1fr auto; gap:.8rem; align-items:center;
+      padding:.85rem 0; border-bottom:1px solid rgba(31,46,35,.7);
+    }
+    .equipo-partido-item:last-child { border-bottom:none; }
+    .equipo-partido-fecha { font-family:'Barlow Condensed',sans-serif; color:var(--text-muted); letter-spacing:1px; font-size:.8rem; }
+    .equipo-partido-rival { font-weight:600; }
+    .equipo-partido-cond { display:block; color:var(--text-muted); font-size:.72rem; margin-top:.15rem; }
+    .equipo-partido-score { font-family:'Bebas Neue',sans-serif; font-size:1.35rem; letter-spacing:1px; white-space:nowrap; }
+    .estado-pendiente { color:#ffc107; }
+    .estado-libre { color:var(--azul-glow); }
+    @media(max-width:576px){
+      .equipo-partido-item { grid-template-columns:1fr auto; }
+      .equipo-partido-fecha { grid-column:1 / -1; }
+    }
 
     /* ── FOOTER ── */
     footer { border-top:1px solid var(--card-border); padding:1.5rem 0; text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:.8rem; letter-spacing:1px; color:var(--text-muted); }
@@ -313,6 +339,22 @@
     SAN JOSE FC &nbsp;·&nbsp; LIGA AMATEUR JUJUY
   </div>
 </footer>
+
+
+<div class="modal fade" id="equipoHistorialModal" tabindex="-1" aria-labelledby="equipoHistorialTitulo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content historial-modal">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title section-title mb-0 border-0 pb-0" id="equipoHistorialTitulo">Historial</h5>
+          <div class="equipo-hint" id="equipoHistorialSubtitulo"></div>
+        </div>
+        <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body" id="equipoHistorialBody"></div>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>

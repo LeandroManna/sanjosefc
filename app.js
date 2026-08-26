@@ -6,23 +6,27 @@ let jugadores  = [];
 let partidos   = [];
 let posiciones = [];
 let torneos    = [];
+let resultadosLiga = [];
 let torneoActivo = null;
 let partidosTorneo = [];
 let posicionesTorneo = [];
+let resultadosLigaTorneo = [];
 
 // ── CARGA DE DATOS ────────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const [jRes, pRes, posRes, torRes] = await Promise.all([
+    const [jRes, pRes, posRes, torRes, ligaRes] = await Promise.all([
       fetch('data/jugadores.json'),
       fetch('data/partidos.json'),
       fetch('data/posiciones.json'),
       fetch('data/torneos.json'),
+      fetch('data/resultados-liga.json'),
     ]);
     jugadores  = await jRes.json();
     partidos   = await pRes.json();
     posiciones = await posRes.json();
     torneos    = await torRes.json();
+    resultadosLiga = ligaRes.ok ? await ligaRes.json() : [];
     torneoActivo = torneos.find(t => t.activo) || torneos[0] || null;
     partidos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
     aplicarTorneoActivo();
@@ -44,6 +48,16 @@ function getNombre(id) {
   return j ? (j.apodo || j.nombre) : '?';
 }
 
+function escapeHTML(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+}
+
+function formatFecha(fecha, opts = {day:'2-digit',month:'2-digit',year:'numeric'}) {
+  return new Date(fecha + 'T00:00:00').toLocaleDateString('es-AR', opts);
+}
+
 function esPrimerTiempo(min) { return min <= T1_MAX; }
 
 function aplicarTorneoActivo() {
@@ -56,6 +70,10 @@ function aplicarTorneoActivo() {
   posicionesTorneo = tieneTorneoId && tid
     ? posiciones.filter(p => p.torneoId === tid)
     : posiciones;
+
+  resultadosLigaTorneo = resultadosLiga
+    .filter(r => !tid || !r.torneoId || r.torneoId === tid)
+    .sort((a, b) => a.jornada - b.jornada || new Date(a.fecha) - new Date(b.fecha));
 }
 
 function seleccionarTorneo(id) {
@@ -178,9 +196,9 @@ function renderPosiciones() {
     const posLabel = pos === 1 ? '🥇' : pos === 2 ? '🥈' : pos === 3 ? '🥉' : pos;
     const dgCls    = eq.dg > 0 ? 'dg-pos' : eq.dg < 0 ? 'dg-neg' : 'dg-neu';
 
-    return `<tr class="${esSJ ? 'fila-propia' : ''}">
+    return `<tr class="equipo-clickable ${esSJ ? 'fila-propia' : ''}" tabindex="0" role="button" onclick="abrirHistorialEquipo(${eq.equipoId})" onkeydown="handleEquipoRowKey(event, ${eq.equipoId})">
       <td class="text-center pos-num" style="color:${pos<=3?'var(--accent)':'var(--text-muted)'}">${posLabel}</td>
-      <td class="equipo-nombre-cell ${esSJ ? 'text-verde-glow fw-bold' : ''}">${esSJ ? '⚡ ' : ''}${eq.equipoNombre}</td>
+      <td class="equipo-nombre-cell ${esSJ ? 'text-verde-glow fw-bold' : ''}">${esSJ ? '⚡ ' : ''}${eq.equipoNombre}<div class="equipo-hint">Ver partidos</div></td>
       <td class="text-center stat-cell">${eq.pj}</td>
       <td class="text-center stat-cell text-success">${eq.pg}</td>
       <td class="text-center stat-cell text-danger">${eq.pp}</td>
@@ -215,6 +233,73 @@ function renderPosiciones() {
       </table>
     </div>
   </div>`;
+}
+
+
+
+// -- MODAL HISTORIAL POR EQUIPO ------------------------------------------------
+function getResultadoEquipo(r, equipoId) {
+  if (r.estado === 'pendiente') return { label:'Pendiente', cls:'estado-pendiente' };
+  if (r.estado === 'libre') return { label:'Libre', cls:'estado-libre' };
+
+  const gf = r.localId === equipoId ? r.golesLocal : r.golesVisitante;
+  const gc = r.localId === equipoId ? r.golesVisitante : r.golesLocal;
+  if (gf > gc) return { label:'Victoria', cls:'text-success' };
+  if (gf < gc) return { label:'Derrota', cls:'text-danger' };
+  return { label:'Empate', cls:'text-warning' };
+}
+
+function renderPartidoEquipo(r, equipoId) {
+  const fecha = formatFecha(r.fecha);
+  if (r.estado === 'libre') {
+    return `<div class="equipo-partido-item">
+      <div class="equipo-partido-fecha">Fecha ${r.jornada}<br>${fecha}</div>
+      <div><div class="equipo-partido-rival">Libre</div><span class="equipo-partido-cond">Sin partido programado</span></div>
+      <div class="equipo-partido-score estado-libre">LIBRE</div>
+    </div>`;
+  }
+
+  const esLocal = r.localId === equipoId;
+  const rival = esLocal ? r.visitante : r.local;
+  const cond = esLocal ? 'Local' : 'Visitante';
+  const marcador = r.estado === 'pendiente'
+    ? '<span class="estado-pendiente">Pendiente</span>'
+    : `${r.golesLocal} - ${r.golesVisitante}`;
+  const resultado = getResultadoEquipo(r, equipoId);
+
+  return `<div class="equipo-partido-item">
+    <div class="equipo-partido-fecha">Fecha ${r.jornada}<br>${fecha}</div>
+    <div>
+      <div class="equipo-partido-rival">vs ${escapeHTML(rival)}</div>
+      <span class="equipo-partido-cond">${cond} · <span class="${resultado.cls}">${resultado.label}</span></span>
+    </div>
+    <div class="equipo-partido-score">${marcador}</div>
+  </div>`;
+}
+
+function abrirHistorialEquipo(equipoId) {
+  const equipo = posicionesTorneo.find(e => e.equipoId === equipoId)
+    || posiciones.find(e => e.equipoId === equipoId)
+    || { equipoNombre:'Equipo' };
+  const partidosEquipo = resultadosLigaTorneo.filter(r =>
+    r.localId === equipoId || r.visitanteId === equipoId || r.equipoLibreId === equipoId
+  );
+
+  document.getElementById('equipoHistorialTitulo').textContent = equipo.equipoNombre;
+  document.getElementById('equipoHistorialSubtitulo').textContent = torneoActivo?.nombre || '';
+  document.getElementById('equipoHistorialBody').innerHTML = partidosEquipo.length
+    ? partidosEquipo.map(r => renderPartidoEquipo(r, equipoId)).join('')
+    : '<p class="text-muted text-center my-3">Sin partidos cargados para este equipo.</p>';
+
+  const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('equipoHistorialModal'));
+  modal.show();
+}
+
+function handleEquipoRowKey(event, equipoId) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    abrirHistorialEquipo(equipoId);
+  }
 }
 
 // ── RENDER TIEMPOS ────────────────────────────────────────────────────────────
@@ -443,4 +528,6 @@ function renderAll() {
 
 window.filterPartidos = filterPartidos;
 window.seleccionarTorneo = seleccionarTorneo;
+window.abrirHistorialEquipo = abrirHistorialEquipo;
+window.handleEquipoRowKey = handleEquipoRowKey;
 document.addEventListener('DOMContentLoaded', loadData);
