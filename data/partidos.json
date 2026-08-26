@@ -1343,5 +1343,53 @@
     ],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "id": 33,
+    "torneoId": 2,
+    "fecha": "2026-08-22",
+    "equipoId": 16,
+    "rival": "Club Deportivo Leon ST",
+    "golesLocal": 3,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 6,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26
+    ],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 15,
+        "minuto": 55
+      },
+      {
+        "jugadorId": 25,
+        "minuto": 65
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
   }
 ]

@@ -153,15 +153,6 @@
     "foto": null
   },
   {
-    "id": 10,
-    "nombre": "Matías Osvaldo",
-    "apellido": "Maldonado",
-    "apodo": "Mati",
-    "posicion": "Defensor",
-    "numero": 19,
-    "foto": null
-  },
-  {
     "id": 5,
     "nombre": "Rodrigo Ignacio",
     "apellido": "Guerrero",
@@ -171,30 +162,30 @@
     "foto": null
   },
   {
-    "id": 6,
-    "nombre": "Luis Sebastián",
-    "apellido": "Herrera Reynaga",
-    "apodo": "Chino",
-    "posicion": "Delantero",
-    "numero": 21,
-    "foto": null
-  },
-  {
-    "id": 17,
-    "nombre": "Cristian Omar",
-    "apellido": "Toconas",
-    "apodo": "Cristian",
+    "id": 24,
+    "nombre": "Julio Emanuel",
+    "apellido": "Llanos",
+    "apodo": "Conejo",
     "posicion": "Defensor",
-    "numero": 22,
+    "numero": null,
     "foto": null
   },
   {
-    "id": 23,
-    "nombre": "Franco",
-    "apellido": "Maita",
-    "apodo": "Elena",
+    "id": 25,
+    "nombre": "Franco Alejandro",
+    "apellido": "Humacata",
+    "apodo": "Pocho",
     "posicion": "Mediocampista",
-    "numero": 23,
+    "numero": null,
+    "foto": null
+  },
+  {
+    "id": 26,
+    "nombre": "Arias Claudio",
+    "apellido": "Facundo",
+    "apodo": null,
+    "posicion": "Mediocampista",
+    "numero": null,
     "foto": null
   }
 ]
