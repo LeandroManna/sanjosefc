@@ -127,13 +127,14 @@
     "torneoId": 2,
     "jornada": 3,
     "fecha": "2026-08-01",
-    "localId": 5,
-    "local": "Doberman ST",
-    "visitanteId": 15,
-    "visitante": "La Banda del Pibe ST",
-    "golesLocal": null,
-    "golesVisitante": null,
-    "estado": "pendiente"
+    "localId": 15,
+    "local": "La Banda del Pibe ST",
+    "visitanteId": 5,
+    "visitante": "Doberman ST",
+    "golesLocal": 1,
+    "golesVisitante": 3,
+    "estado": "deducido",
+    "nota": "Resultado deducido por cruce de fixture, resultados conocidos y tabla oficial. Pendiente de confirmar con flyer."
   },
   {
     "id": 12,
@@ -144,22 +145,24 @@
     "local": "Union Alto Bertres ST",
     "visitanteId": 9,
     "visitante": "EPAM 3 ST",
-    "golesLocal": null,
-    "golesVisitante": null,
-    "estado": "pendiente"
+    "golesLocal": 1,
+    "golesVisitante": 0,
+    "estado": "deducido",
+    "nota": "Resultado deducido por cruce de fixture, resultados conocidos y tabla oficial. Pendiente de confirmar con flyer."
   },
   {
     "id": 13,
     "torneoId": 2,
     "jornada": 3,
     "fecha": "2026-08-01",
-    "localId": 11,
-    "local": "Cucharita ST",
-    "visitanteId": 16,
-    "visitante": "Club Deportivo Leon ST",
-    "golesLocal": null,
-    "golesVisitante": null,
-    "estado": "pendiente"
+    "localId": 16,
+    "local": "Club Deportivo Leon ST",
+    "visitanteId": 11,
+    "visitante": "Cucharita ST",
+    "golesLocal": 0,
+    "golesVisitante": 6,
+    "estado": "deducido",
+    "nota": "Resultado deducido por cruce de fixture, resultados conocidos y tabla oficial. Pendiente de confirmar con flyer."
   },
   {
     "id": 14,

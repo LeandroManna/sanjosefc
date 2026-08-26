@@ -266,12 +266,13 @@ function renderPartidoEquipo(r, equipoId) {
     ? '<span class="estado-pendiente">Pendiente</span>'
     : `${r.golesLocal} - ${r.golesVisitante}`;
   const resultado = getResultadoEquipo(r, equipoId);
+  const estadoExtra = r.estado === 'deducido' ? ' · <span class="estado-pendiente">Deducido</span>' : '';
 
   return `<div class="equipo-partido-item">
     <div class="equipo-partido-fecha">Fecha ${r.jornada}<br>${fecha}</div>
     <div>
       <div class="equipo-partido-rival">vs ${escapeHTML(rival)}</div>
-      <span class="equipo-partido-cond">${cond} · <span class="${resultado.cls}">${resultado.label}</span></span>
+      <span class="equipo-partido-cond">${cond} · <span class="${resultado.cls}">${resultado.label}</span>${estadoExtra}</span>
     </div>
     <div class="equipo-partido-score">${marcador}</div>
   </div>`;
