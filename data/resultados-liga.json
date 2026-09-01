@@ -363,5 +363,83 @@
     "equipoLibreId": 5,
     "equipoLibre": "Doberman ST",
     "estado": "libre"
+  },
+  {
+    "id": 30,
+    "torneoId": 2,
+    "jornada": 7,
+    "fecha": "2026-08-29",
+    "localId": 8,
+    "local": "San Pedrito FC ST",
+    "visitanteId": 18,
+    "visitante": "Los Lobos FC ST",
+    "golesLocal": 8,
+    "golesVisitante": 0,
+    "estado": "jugado"
+  },
+  {
+    "id": 31,
+    "torneoId": 2,
+    "jornada": 7,
+    "fecha": "2026-08-29",
+    "localId": 17,
+    "local": "La Banda ST",
+    "visitanteId": 19,
+    "visitante": "Real FC ST",
+    "golesLocal": 4,
+    "golesVisitante": 1,
+    "estado": "jugado"
+  },
+  {
+    "id": 32,
+    "torneoId": 2,
+    "jornada": 7,
+    "fecha": "2026-08-29",
+    "localId": 9,
+    "local": "EPAM 3 ST",
+    "visitanteId": 5,
+    "visitante": "Doberman ST",
+    "golesLocal": 0,
+    "golesVisitante": 0,
+    "estado": "jugado"
+  },
+  {
+    "id": 33,
+    "torneoId": 2,
+    "jornada": 7,
+    "fecha": "2026-08-29",
+    "localId": 10,
+    "local": "Union Alto Bertres ST",
+    "visitanteId": 11,
+    "visitante": "Cucharita ST",
+    "golesLocal": 0,
+    "golesVisitante": 5,
+    "estado": "jugado"
+  },
+  {
+    "id": 34,
+    "torneoId": 2,
+    "jornada": 7,
+    "fecha": "2026-08-29",
+    "localId": 20,
+    "local": "UFA ST",
+    "visitanteId": 6,
+    "visitante": "San Jose FC ST",
+    "golesLocal": 1,
+    "golesVisitante": 0,
+    "estado": "jugado"
+  },
+  {
+    "id": 35,
+    "torneoId": 2,
+    "jornada": 7,
+    "fecha": "2026-08-29",
+    "localId": 21,
+    "local": "Fenix FC ST",
+    "visitanteId": 15,
+    "visitante": "La Banda del Pibe ST",
+    "golesLocal": 0,
+    "golesVisitante": 5,
+    "estado": "jugado"
   }
 ]

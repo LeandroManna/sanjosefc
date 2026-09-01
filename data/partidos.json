@@ -1391,5 +1391,40 @@
     ],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "id": 34,
+    "torneoId": 2,
+    "fecha": "2026-08-29",
+    "equipoId": 20,
+    "rival": "UFA ST",
+    "golesLocal": 1,
+    "golesVisitante": 0,
+    "condicion": "visitante",
+    "jornada": 7,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26
+    ],
+    "goles": [],
+    "amarillas": [],
+    "rojas": []
   }
 ]
