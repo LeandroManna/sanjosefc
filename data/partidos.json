@@ -1425,6 +1425,51 @@
     ],
     "goles": [],
     "amarillas": [],
-    "rojas": []
+    "rojas": [
+      {
+        "jugadorId": 3,
+        "minuto": 45
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "torneoId": 2,
+    "fecha": "2026-09-05",
+    "equipoId": 9,
+    "rival": "EPAM 3 ST",
+    "golesLocal": 0,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 8,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26
+    ],
+    "goles": [],
+    "amarillas": [],
+    "rojas": [
+      {
+        "jugadorId": 15,
+        "minuto": 55
+      }
+    ]
   }
 ]
