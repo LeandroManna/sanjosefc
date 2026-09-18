@@ -1471,5 +1471,45 @@
         "minuto": 55
       }
     ]
+  },
+  {
+    "id": 36,
+    "torneoId": 2,
+    "fecha": "2026-09-12",
+    "equipoId": 5,
+    "rival": "Doberman ST",
+    "golesLocal": 1,
+    "golesVisitante": 1,
+    "condicion": "visitante",
+    "jornada": 9,
+    "jugadores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26
+    ],
+    "goles": [
+      {
+        "jugadorId": 15,
+        "minuto": 10
+      }
+    ],
+    "amarillas": [],
+    "rojas": []
   }
 ]
