@@ -1511,5 +1511,203 @@
     ],
     "amarillas": [],
     "rojas": []
+  },
+  {
+    "torneoId": 2,
+    "fecha": "2026-09-19",
+    "equipoId": 11,
+    "rival": "Cucharita ST",
+    "golesLocal": 2,
+    "golesVisitante": 1,
+    "condicion": "local",
+    "jornada": 10,
+    "jugadores": [
+      1,
+      13,
+      19,
+      24,
+      21,
+      15,
+      5,
+      3,
+      4,
+      9,
+      8,
+      12,
+      7,
+      27,
+      2,
+      28,
+      29,
+      11,
+      20,
+      25,
+      26,
+      16,
+      18,
+      14,
+      30
+    ],
+    "goles": [
+      {
+        "jugadorId": 9,
+        "minuto": 18
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 52
+      }
+    ],
+    "amarillas": [],
+    "rojas": [],
+    "id": 37
+  },
+  {
+    "torneoId": 2,
+    "fecha": "2026-09-26",
+    "equipoId": 18,
+    "rival": "Los Lobos FC ST",
+    "golesLocal": 4,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 11,
+    "jugadores": [
+      1,
+      13,
+      19,
+      24,
+      21,
+      15,
+      5,
+      3,
+      4,
+      9,
+      8,
+      12,
+      7,
+      27,
+      2,
+      28,
+      29,
+      11,
+      20,
+      25,
+      26,
+      16,
+      18,
+      14,
+      30
+    ],
+    "goles": [
+      {
+        "jugadorId": 13,
+        "minuto": 12
+      },
+      {
+        "jugadorId": 7,
+        "minuto": 28
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 47
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 63
+      }
+    ],
+    "amarillas": [],
+    "rojas": [],
+    "id": 38
+  },
+  {
+    "torneoId": 2,
+    "fecha": "2026-10-03",
+    "equipoId": 21,
+    "rival": "Fenix FC ST",
+    "golesLocal": 12,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 12,
+    "jugadores": [
+      1,
+      13,
+      19,
+      24,
+      21,
+      15,
+      5,
+      3,
+      4,
+      9,
+      8,
+      12,
+      7,
+      27,
+      2,
+      28,
+      29,
+      11,
+      20,
+      25,
+      26,
+      16,
+      18,
+      14,
+      30
+    ],
+    "goles": [
+      {
+        "jugadorId": 5,
+        "minuto": 5
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 10
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 15
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 20
+      },
+      {
+        "jugadorId": 5,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 34
+      },
+      {
+        "jugadorId": 28,
+        "minuto": 40
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 45
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 50
+      },
+      {
+        "jugadorId": 5,
+        "minuto": 58
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 66
+      }
+    ],
+    "amarillas": [],
+    "rojas": [],
+    "id": 39
   }
 ]
