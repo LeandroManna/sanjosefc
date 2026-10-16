@@ -463,7 +463,7 @@ function renderEstadisticas() {
     const medal = ['🥇','🥈','🥉'][i] || '';
     return `<div class="top-goleador-item">
       <div class="d-flex justify-content-between align-items-center mb-1">
-        <span class="goleador-name">${medal} ${j.apodo} <small class="text-muted">${j.apellido}</small></span>
+        <span class="goleador-name">${medal} ${j.apodo} <small class="goleador-apellido">${j.apellido}</small></span>
         <span class="goles-count">${j.goles} ⚽</span>
       </div>
       <div class="progress gol-bar">
