@@ -1709,5 +1709,62 @@
     "amarillas": [],
     "rojas": [],
     "id": 39
+  },
+  {
+    "id": 40,
+    "torneoId": 2,
+    "fecha": "2026-10-10",
+    "equipoId": 17,
+    "rival": "La Banda ST",
+    "golesLocal": 0,
+    "golesVisitante": 4,
+    "condicion": "local",
+    "jornada": 13,
+    "jugadores": [],
+    "goles": [],
+    "amarillas": [],
+    "rojas": [],
+    "nota": ""
+  },
+  {
+    "id": 41,
+    "torneoId": 2,
+    "fecha": "2026-10-12",
+    "equipoId": 18,
+    "rival": "Los Lobos FC ST",
+    "golesLocal": 6,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 13,
+    "jugadores": [],
+    "goles": [
+      {
+        "jugadorId": 7,
+        "minuto": 25
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 40
+      },
+      {
+        "jugadorId": 9,
+        "minuto": 46
+      },
+      {
+        "jugadorId": 5,
+        "minuto": 52
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 59
+      },
+      {
+        "jugadorId": 4,
+        "minuto": 66
+      }
+    ],
+    "amarillas": [],
+    "rojas": [],
+    "nota": "Partido pendiente. Fecha original no informada. Minutos de goles aproximados."
   }
 ]

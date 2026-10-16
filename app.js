@@ -239,6 +239,7 @@ function renderPosiciones() {
 
 // -- MODAL HISTORIAL POR EQUIPO ------------------------------------------------
 function getResultadoEquipo(r, equipoId) {
+  if (r.estado === 'adjudicado') return { label: r.localId === equipoId ? 'Victoria administrativa' : 'Derrota administrativa', cls: r.localId === equipoId ? 'text-success' : 'text-danger' };
   if (r.estado === 'pendiente') return { label:'Pendiente', cls:'estado-pendiente' };
   if (r.estado === 'libre') return { label:'Libre', cls:'estado-libre' };
 
@@ -262,7 +263,7 @@ function renderPartidoEquipo(r, equipoId) {
   const esLocal = r.localId === equipoId;
   const rival = esLocal ? r.visitante : r.local;
   const cond = esLocal ? 'Local' : 'Visitante';
-  const marcador = r.estado === 'pendiente'
+  const marcador = r.estado === 'adjudicado' ? 'Sin marcador informado' : r.estado === 'pendiente'
     ? '<span class="estado-pendiente">Pendiente</span>'
     : `${r.golesLocal} - ${r.golesVisitante}`;
   const resultado = getResultadoEquipo(r, equipoId);
