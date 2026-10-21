@@ -1766,5 +1766,39 @@
     "amarillas": [],
     "rojas": [],
     "nota": "Partido pendiente. Fecha original no informada. Minutos de goles aproximados."
+  },
+  {
+    "id": 42,
+    "torneoId": 2,
+    "fecha": "2026-10-17",
+    "equipoId": 5,
+    "rival": "Doberman ST",
+    "golesLocal": 1,
+    "golesVisitante": 3,
+    "condicion": "visitante",
+    "jornada": 14,
+    "jugadores": [],
+    "goles": [
+      {
+        "jugadorId": 4,
+        "minuto": 15
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 28
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 60
+      }
+    ],
+    "amarillas": [],
+    "rojas": [
+      {
+        "jugadorId": 15,
+        "minuto": 48
+      }
+    ],
+    "nota": "Minutos aproximados. Expulsion de Chino en el segundo tiempo antes del tercer gol."
   }
 ]
