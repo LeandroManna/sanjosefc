@@ -1800,5 +1800,52 @@
       }
     ],
     "nota": "Minutos aproximados. Expulsion de Chino en el segundo tiempo antes del tercer gol."
+  },
+  {
+    "id": 43,
+    "torneoId": 2,
+    "fecha": "2026-10-24",
+    "equipoId": 10,
+    "rival": "Union Alto Bertres ST",
+    "golesLocal": 4,
+    "golesVisitante": 0,
+    "condicion": "local",
+    "jornada": 15,
+    "jugadores": [],
+    "goles": [
+      {
+        "jugadorId": 15,
+        "minuto": 12
+      },
+      {
+        "jugadorId": 11,
+        "minuto": 28
+      },
+      {
+        "jugadorId": 7,
+        "minuto": 45
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 56
+      }
+    ],
+    "amarillas": [
+      {
+        "jugadorId": 27,
+        "minuto": 30
+      },
+      {
+        "jugadorId": 27,
+        "minuto": 61
+      }
+    ],
+    "rojas": [
+      {
+        "jugadorId": 27,
+        "minuto": 61
+      }
+    ],
+    "nota": "Minutos aproximados. Yamil expulsado por segunda amarilla despues de su gol."
   }
 ]
